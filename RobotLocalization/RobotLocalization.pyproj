@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>d6ca49de-d7aa-472f-86d4-91e2098ee80b</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>sense_functio1.py</StartupFile>
+    <StartupFile>robot_localization.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,6 +22,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="RobotLocalization.py" />
+    <Compile Include="robot_localization.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="sense_functio1.py">
       <SubType>Code</SubType>
     </Compile>
