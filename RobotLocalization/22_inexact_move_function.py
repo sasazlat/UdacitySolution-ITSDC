@@ -1,7 +1,7 @@
 #Modify the move function to accommodate the added
 #probabilities of overshooting or undershooting
 #the intended destination.
-p = [1, 2, 3, 4, 5]
+p = [0,1,0,0,0]
 world = ['green', 'red', 'red', 'green', 'green']
 measurements = ['red', 'green']
 pHit = 0.6
@@ -21,23 +21,24 @@ def sense(p, Z):
     return q
 
 def move(p, U):
-    q = p
     #for i in range(len(p)):
     #    q.append(p[(i - U) % len(p)])
 
-
-    #U = U % len(p)
+    U = U % len(p)
     #q = p[-U:] + p[:-U]
-
-    i = U = U % len(p)
-    while i > 0:
-        q = q[-1:] + q[:-1]
-        i -= 1 
-
-    for i in q:
-        i = i 
+    q = [0] * len(p)
+    for i in range(len(p) - U):
+        q[i] += p[-U + i] * pExact
+        q[i + 1] += p[-U + i] * pOvershoot
+        q[i - 1] += p[-U + i] * pUndershoot
+    #i = U = U % len(p)
+    #while i > 0:
+    #    q = q[-1:] + q[:-1]
+    #    i -= 1
+    #for i in q:
+    #    i = i
     return q
     
 
-print(move(p, 3))
+print(move(p, 1))
 
