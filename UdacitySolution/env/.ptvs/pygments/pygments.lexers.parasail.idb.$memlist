@@ -1,0 +1,14 @@
+Text
+Name
+Comment
+__all__
+re
+Number
+ParaSailLexer
+Punctuation
+Operator
+RegexLexer
+Keyword
+Literal
+include
+String

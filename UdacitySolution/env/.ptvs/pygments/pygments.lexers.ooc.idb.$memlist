@@ -1,0 +1,13 @@
+Text
+Comment
+bygroups
+__all__
+OocLexer
+Number
+words
+Name
+Operator
+RegexLexer
+Keyword
+Punctuation
+String

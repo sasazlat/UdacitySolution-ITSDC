@@ -1,0 +1,15 @@
+format_lines
+DATATYPES_URL
+urlopen
+update_consts
+parse_datatypes
+SOURCE_URL
+KEYWORDS_URL
+update_myself
+KEYWORDS
+DATATYPES
+parse_pseudos
+parse_keywords
+PLPGSQL_KEYWORDS
+re
+PSEUDO_TYPES

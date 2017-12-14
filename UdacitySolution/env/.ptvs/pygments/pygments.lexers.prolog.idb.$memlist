@@ -1,0 +1,14 @@
+Text
+Operator
+bygroups
+__all__
+Number
+Punctuation
+Name
+Comment
+RegexLexer
+PrologLexer
+Keyword
+LogtalkLexer
+re
+String

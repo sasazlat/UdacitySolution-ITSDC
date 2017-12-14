@@ -1,0 +1,7 @@
+get_app_qt4
+get_ipython
+is_event_loop_running_wx
+get_app_wx
+is_event_loop_running_qt4
+start_event_loop_qt4
+start_event_loop_wx

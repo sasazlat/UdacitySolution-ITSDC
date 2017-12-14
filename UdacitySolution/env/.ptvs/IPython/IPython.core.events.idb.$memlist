@@ -1,0 +1,8 @@
+_define_event
+EventManager
+pre_run_cell
+pre_execute
+available_events
+post_execute
+post_run_cell
+shell_initialized

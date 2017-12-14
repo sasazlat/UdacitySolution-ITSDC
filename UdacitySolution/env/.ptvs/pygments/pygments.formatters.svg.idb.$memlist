@@ -1,0 +1,7 @@
+get_bool_opt
+escape_html
+get_int_opt
+__all__
+SvgFormatter
+Formatter
+class2style

@@ -1,0 +1,14 @@
+check_latex_to_png_dvipng_fails_when_no_cmd
+nt
+latextools
+test_genelatex_wrap_without_breqn
+test_latex_to_png_mpl_runs
+test_genelatex_wrap_with_breqn
+test_latex_to_png_dvipng_runs
+patch
+FindCmdError
+skipif_not_matplotlib
+test_latex_to_png_dvipng_fails_when_no_cmd
+test_latex_to_html
+onlyif_cmds_exist
+test_genelatex_no_wrap

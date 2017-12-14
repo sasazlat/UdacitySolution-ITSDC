@@ -1,0 +1,12 @@
+__all__
+zmq_version_info
+VERSION_PATCH
+__version__
+VERSION_MINOR
+pyzmq_version_info
+VERSION_EXTRA
+__revision__
+zmq_version
+pyzmq_version
+version_info
+VERSION_MAJOR

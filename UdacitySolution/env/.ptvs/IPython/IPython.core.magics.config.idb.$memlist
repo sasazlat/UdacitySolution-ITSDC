@@ -1,0 +1,8 @@
+magics_class
+reg
+error
+UsageError
+Magics
+ConfigMagics
+re
+line_magic

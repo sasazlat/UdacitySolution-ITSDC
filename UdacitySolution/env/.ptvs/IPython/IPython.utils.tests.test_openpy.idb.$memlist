@@ -1,0 +1,10 @@
+test_detect_encoding
+test_source_to_unicode
+nt
+test_list_readline
+mydir
+test_read_file
+openpy
+os
+io
+nonascii_path

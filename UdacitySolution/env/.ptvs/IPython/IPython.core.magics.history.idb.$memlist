@@ -1,0 +1,14 @@
+_unspecified
+skip_doctest
+os
+io_open
+parse_argstring
+argument
+line_magic
+magics_class
+HistoryMagics
+Magics
+io
+magic_arguments
+sys
+StdinNotImplementedError

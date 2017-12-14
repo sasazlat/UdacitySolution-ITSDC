@@ -1,0 +1,12 @@
+QtGui
+allow_CTRL_C
+os
+InteractiveShell
+threading
+sigint_timer
+QtCore
+signal
+got_kbdint
+stdin_ready
+ignore_CTRL_C
+create_inputhook_qt4

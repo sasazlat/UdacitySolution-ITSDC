@@ -1,0 +1,5 @@
+modeline_re
+re
+__all__
+get_filetype_from_buffer
+get_filetype_from_line

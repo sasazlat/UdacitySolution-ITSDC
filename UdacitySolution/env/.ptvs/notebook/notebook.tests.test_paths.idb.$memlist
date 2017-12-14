@@ -1,0 +1,8 @@
+nt
+assert_regex
+path_pat
+assert_not_regex
+test_path_regex_bad
+path_regex
+test_path_regex
+re

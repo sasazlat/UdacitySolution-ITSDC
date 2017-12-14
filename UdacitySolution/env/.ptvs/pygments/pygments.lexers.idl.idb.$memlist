@@ -1,0 +1,12 @@
+Text
+Name
+Comment
+__all__
+IDLLexer
+Number
+words
+Operator
+RegexLexer
+Keyword
+re
+String

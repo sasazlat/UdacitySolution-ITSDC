@@ -1,0 +1,12 @@
+draw_if_interactive
+show
+get_ipython
+FigureCanvas
+display
+Gcf
+FigureCanvasAgg
+print_function
+flush_figures
+_enable_matplotlib_integration
+InlineBackend
+matplotlib

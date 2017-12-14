@@ -1,0 +1,10 @@
+Text
+Name
+Comment
+__all__
+Literal
+CapnProtoLexer
+default
+RegexLexer
+Keyword
+re

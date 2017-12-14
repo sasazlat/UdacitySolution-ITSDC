@@ -1,0 +1,15 @@
+Text
+bygroups
+Comment
+DarcsPatchLexer
+__all__
+Generic
+re
+DiffLexer
+Name
+Operator
+RegexLexer
+WDiffLexer
+Keyword
+Literal
+include

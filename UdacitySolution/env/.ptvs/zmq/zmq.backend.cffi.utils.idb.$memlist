@@ -1,0 +1,12 @@
+has
+EINTR
+_check_rc
+_check_version
+__all__
+curve_keypair
+C
+ffi
+ZMQError
+InterruptedSystemCall
+_retry_sys_call
+unicode

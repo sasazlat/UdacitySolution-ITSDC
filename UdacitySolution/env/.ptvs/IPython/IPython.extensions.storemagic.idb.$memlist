@@ -1,0 +1,15 @@
+load_ipython_extension
+restore_aliases
+os
+Bool
+inspect
+StoreMagics
+refresh_variables
+magics_class
+UsageError
+restore_data
+textwrap
+Magics
+restore_dhist
+sys
+line_magic

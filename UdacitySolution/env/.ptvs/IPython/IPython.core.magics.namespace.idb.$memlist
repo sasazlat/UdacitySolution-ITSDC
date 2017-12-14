@@ -1,0 +1,14 @@
+read_py_file
+get_py_filename
+skip_doctest
+sys
+line_magic
+magics_class
+UsageError
+page
+NamespaceMagics
+Magics
+gc
+DEFAULT_ENCODING
+re
+StdinNotImplementedError

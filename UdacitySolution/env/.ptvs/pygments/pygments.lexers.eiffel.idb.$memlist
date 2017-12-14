@@ -1,0 +1,13 @@
+Text
+Name
+Comment
+__all__
+EiffelLexer
+Number
+words
+Punctuation
+Operator
+RegexLexer
+Keyword
+include
+String

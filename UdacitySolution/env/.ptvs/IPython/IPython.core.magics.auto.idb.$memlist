@@ -1,0 +1,7 @@
+skip_doctest
+Magics
+line_magic
+error
+AutoMagics
+Bunch
+magics_class

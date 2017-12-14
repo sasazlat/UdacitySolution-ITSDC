@@ -1,0 +1,12 @@
+BlockingInProcessKernelClient
+blocking
+socket
+ipkernel
+constants
+client
+InProcessKernelManager
+manager
+channels
+InProcessKernelClient
+InProcessHBChannel
+InProcessChannel

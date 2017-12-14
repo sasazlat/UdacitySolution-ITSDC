@@ -1,0 +1,15 @@
+read_py_file
+cookie_comment_re
+_list_readline
+open
+TextIOWrapper
+detect_encoding
+read_py_url
+cache_from_source
+strip_encoding_cookie
+source_from_cache
+source_to_unicode
+BytesIO
+cookie_re
+io
+re

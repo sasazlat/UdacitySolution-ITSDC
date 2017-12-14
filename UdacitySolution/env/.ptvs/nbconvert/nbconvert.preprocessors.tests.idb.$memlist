@@ -1,0 +1,13 @@
+test_regexremove
+test_extractoutput
+test_csshtmlheader
+test_execute
+test_tagremove
+test_latex
+test_sanitize
+test_highlightmagics
+test_clearoutput
+fake_kernelmanager
+test_svg2pdf
+base
+test_coalescestreams

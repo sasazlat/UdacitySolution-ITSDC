@@ -1,0 +1,15 @@
+wcwidth
+Completion
+Completer
+IPythonPTLexer
+IPythonPTCompleter
+_elide
+provisionalcompleter
+PygmentsLexer
+_deduplicate_completions
+cursor_to_position
+unicodedata
+Lexer
+_adjust_completion_text_based_on_context
+_completion_sentinel
+pygments_lexers

@@ -1,0 +1,10 @@
+SetConsoleCtrlHandler
+os
+windll
+WINFUNCTYPE
+kernel32
+_allow_interrupt
+PHANDLER_ROUTINE
+BOOL
+allow_interrupt
+DWORD

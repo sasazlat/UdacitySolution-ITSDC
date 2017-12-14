@@ -1,0 +1,5 @@
+csp_report_uri
+APIHandler
+default_handlers
+CSPReportHandler
+web

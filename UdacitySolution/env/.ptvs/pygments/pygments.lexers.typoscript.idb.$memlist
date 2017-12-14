@@ -1,0 +1,16 @@
+include
+TypoScriptHtmlDataLexer
+Punctuation
+bygroups
+using
+Comment
+TypoScriptLexer
+__all__
+Number
+Operator
+String
+Text
+Name
+re
+RegexLexer
+TypoScriptCssDataLexer

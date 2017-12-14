@@ -1,0 +1,8 @@
+test_serverextensions
+test_paths
+test_notebookapp
+test_files
+launchnotebook
+test_nbextensions
+test_serialize
+test_utils

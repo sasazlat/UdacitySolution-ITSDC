@@ -1,0 +1,7 @@
+_make_zmq_pollitem
+C
+__all__
+zmq_poll
+ffi
+_make_zmq_pollitem_fromfd
+_retry_sys_call

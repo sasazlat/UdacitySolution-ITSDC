@@ -1,0 +1,15 @@
+_adjust_completion_text_based_on_context
+TerminalMagicsTestCase
+capture_output
+mock_input
+TestContextAwareCompletion
+InputTransformer
+_elide
+mock_input_helper
+SyntaxErrorTransformer
+nt
+InteractiveShellTestCase
+tt
+TestElide
+sys
+unittest

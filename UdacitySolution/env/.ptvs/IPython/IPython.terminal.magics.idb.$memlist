@@ -1,0 +1,15 @@
+get_pasted_lines
+SList
+py3compat
+os
+TerminalMagics
+sys
+line_magic
+error
+UsageError
+TryNext
+ClipboardEmpty
+Magics
+strip_email_quotes
+IPythonInputSplitter
+magics_class

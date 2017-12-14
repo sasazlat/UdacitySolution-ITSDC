@@ -1,0 +1,15 @@
+Text
+Operator
+Comment
+__all__
+re
+Number
+words
+Name
+default
+RegexLexer
+SuperColliderLexer
+Keyword
+Punctuation
+include
+String

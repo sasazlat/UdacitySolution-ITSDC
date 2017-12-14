@@ -1,0 +1,15 @@
+Text
+Punctuation
+bygroups
+__all__
+LimboLexer
+re
+String
+Operator
+Comment
+default
+RegexLexer
+Keyword
+Number
+include
+Name

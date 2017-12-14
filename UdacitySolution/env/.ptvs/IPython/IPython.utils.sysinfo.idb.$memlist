@@ -1,0 +1,17 @@
+_num_cpus_darwin
+_num_cpus_unix
+py3compat
+os
+sys_info
+encoding
+pprint
+subprocess
+release
+_num_cpus_windows
+pkg_info
+num_cpus
+pkg_commit_hash
+platform
+get_sys_info
+_sysinfo
+sys

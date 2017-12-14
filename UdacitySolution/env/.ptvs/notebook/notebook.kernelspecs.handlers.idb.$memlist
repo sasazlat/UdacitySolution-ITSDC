@@ -1,0 +1,5 @@
+KernelSpecResourceHandler
+kernel_name_regex
+IPythonHandler
+default_handlers
+web

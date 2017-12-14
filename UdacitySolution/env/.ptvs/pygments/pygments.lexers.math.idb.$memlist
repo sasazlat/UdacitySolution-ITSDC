@@ -1,0 +1,16 @@
+StanLexer
+OctaveLexer
+JuliaConsoleLexer
+ScilabLexer
+RConsoleLexer
+MatlabLexer
+NumPyLexer
+RdLexer
+SLexer
+__all__
+JuliaLexer
+MatlabSessionLexer
+JagsLexer
+IDLLexer
+BugsLexer
+MuPADLexer

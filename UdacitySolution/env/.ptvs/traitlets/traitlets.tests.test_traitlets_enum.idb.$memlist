@@ -1,0 +1,9 @@
+TestUseEnum
+HasTraits
+UseEnum
+OtherColor
+enum
+TraitError
+string_types
+Color
+unittest

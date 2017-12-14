@@ -1,0 +1,7 @@
+ClipboardEmpty
+osx_clipboard_get
+subprocess
+tkinter_clipboard_get
+TryNext
+py3compat
+win32_clipboard_get

@@ -1,0 +1,12 @@
+StringIO
+capture_output
+InProcessKernelManager
+BlockingInProcessKernelClient
+py3compat
+print_function
+assemble_output
+skipif_not_matplotlib
+InProcessKernel
+InProcessKernelTestCase
+sys
+unittest

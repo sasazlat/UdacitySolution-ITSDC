@@ -1,0 +1,15 @@
+Text
+Comment
+bygroups
+AutohotkeyLexer
+__all__
+Generic
+AutoItLexer
+Number
+Punctuation
+Name
+Operator
+RegexLexer
+combined
+include
+String

@@ -1,0 +1,6 @@
+test_import_PyColorize
+test_import_generics
+test_import_coloransi
+test_import_wildcard
+test_import_strdispatch
+test_import_ipstruct

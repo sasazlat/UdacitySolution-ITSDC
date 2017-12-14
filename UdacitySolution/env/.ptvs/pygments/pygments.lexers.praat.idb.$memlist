@@ -1,0 +1,14 @@
+Text
+Name
+bygroups
+PraatLexer
+__all__
+Operator
+Number
+words
+Punctuation
+Comment
+RegexLexer
+Keyword
+include
+String

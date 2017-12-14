@@ -1,0 +1,5 @@
+PY3
+unicode_std_stream
+unicode_stdin_stream
+codecs
+sys

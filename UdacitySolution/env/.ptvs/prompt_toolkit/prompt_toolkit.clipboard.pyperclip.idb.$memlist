@@ -1,0 +1,8 @@
+ClipboardData
+pyperclip
+absolute_import
+unicode_literals
+Clipboard
+__all__
+SelectionType
+PyperclipClipboard

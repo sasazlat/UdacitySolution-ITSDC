@@ -1,0 +1,14 @@
+Text
+Name
+Comment
+__all__
+re
+Number
+Punctuation
+Operator
+RegexLexer
+NixLexer
+Keyword
+Literal
+include
+String

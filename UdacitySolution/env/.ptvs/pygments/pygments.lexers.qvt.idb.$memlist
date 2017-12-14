@@ -1,0 +1,16 @@
+include
+Number
+combined
+Punctuation
+Keyword
+words
+Comment
+QVToLexer
+__all__
+default
+Operator
+String
+Text
+Name
+bygroups
+RegexLexer

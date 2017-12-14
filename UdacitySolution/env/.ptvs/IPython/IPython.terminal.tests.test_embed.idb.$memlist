@@ -1,0 +1,10 @@
+test_nest_embed
+os
+nt
+NamedFileInTemporaryDirectory
+_exit
+subprocess
+test_ipython_embed
+skip_win32
+_sample_embed
+sys

@@ -1,0 +1,10 @@
+_instance_check_cache
+CLIFilter
+_FilterType
+weakref
+__all__
+unicode_literals
+with_metaclass
+SimpleFilter
+_FilterTypeMeta
+defaultdict

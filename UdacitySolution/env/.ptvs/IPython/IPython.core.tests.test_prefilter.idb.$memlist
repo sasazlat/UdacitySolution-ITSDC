@@ -1,0 +1,9 @@
+test_issue_114
+get_ipython
+nt
+test_prefilter
+AutocallChecker
+test_prefilter_shadowed
+ip
+test_prefilter_attribute_errors
+test_autocall_binops

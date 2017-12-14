@@ -1,0 +1,16 @@
+knownfailureif
+skipif
+setastest
+ImportError
+_decorators
+KnownFailureTest
+assert_warns
+SkipTest
+absolute_import
+slow
+print_function
+deprecated
+division
+KnownFailure
+collections
+_numpy_testing_noseclasses

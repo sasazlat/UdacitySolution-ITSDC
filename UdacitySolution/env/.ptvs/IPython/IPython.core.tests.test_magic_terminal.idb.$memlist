@@ -1,0 +1,9 @@
+check_cpaste
+test_cpaste
+nt
+TestCase
+StringIO
+ip
+tt
+PasteTestCase
+sys

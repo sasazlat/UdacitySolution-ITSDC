@@ -1,0 +1,59 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>c764ad8a-a5ce-43f3-b4b9-15f1ef769486</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>discrete_probability_exercise.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>PprobabilityDistribution</Name>
+    <RootNamespace>PprobabilityDistribution</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="3_function_improvments.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="4_visualize_uniform_distribution.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="5_visualize_discrete_distribution.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="6_1D_selfdrivingcar.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="7_2D_selfdrivingcar.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="8_central_limit_theorem_demo.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="discrete_probability_exercise.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PprobabilityDistribution.py" />
+    <Compile Include="uniform_probability_distribution.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>

@@ -1,0 +1,14 @@
+Text
+Name
+bygroups
+__all__
+Generic
+PyPyLogLexer
+Number
+VCTreeStatusLexer
+Punctuation
+Comment
+RegexLexer
+Keyword
+include
+String

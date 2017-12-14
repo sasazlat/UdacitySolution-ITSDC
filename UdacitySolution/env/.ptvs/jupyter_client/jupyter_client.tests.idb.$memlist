@@ -1,0 +1,12 @@
+test_adapter
+test_session
+utils
+test_localinterfaces
+test_client
+test_kernelspec
+test_jsonutil
+test_multikernelmanager
+test_public_api
+test_kernelmanager
+test_connect
+signalkernel

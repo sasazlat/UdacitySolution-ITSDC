@@ -1,0 +1,17 @@
+sys
+KERNEL_NAME
+get_kernel_dict
+RESOURCES
+tempfile
+os
+write_kernel_spec
+pjoin
+make_ipkernel_cmd
+InstallIPythonKernelSpecApp
+errno
+print_function
+install
+json
+Application
+KernelSpecManager
+shutil

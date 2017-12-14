@@ -1,0 +1,9 @@
+test_combining_enclosing
+test_null_width_0
+test_combining_spacing
+test_combining_cafe
+wcwidth
+test_wcswidth_substr
+test_hello_jp
+test_control_c0_width_negative_1
+test_combining_width_negative_1

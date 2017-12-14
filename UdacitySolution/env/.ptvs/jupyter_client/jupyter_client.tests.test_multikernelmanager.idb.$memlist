@@ -1,0 +1,9 @@
+TestKernelManager
+Config
+skip_win32
+time
+TestCase
+localhost
+MultiKernelManager
+KernelManager
+PIPE

@@ -1,0 +1,12 @@
+Text
+Name
+Comment
+__all__
+ElmLexer
+Number
+words
+Punctuation
+RegexLexer
+Keyword
+include
+String

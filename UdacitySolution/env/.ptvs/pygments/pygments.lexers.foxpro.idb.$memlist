@@ -1,0 +1,11 @@
+Text
+Punctuation
+Comment
+__all__
+FoxProLexer
+Name
+Operator
+RegexLexer
+Keyword
+re
+String

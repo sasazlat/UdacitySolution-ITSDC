@@ -1,0 +1,11 @@
+Preprocessor
+ALLOWED_TAGS
+Any
+Bool
+Unicode
+Set
+List
+ALLOWED_ATTRIBUTES
+clean
+ALLOWED_STYLES
+SanitizeHTML

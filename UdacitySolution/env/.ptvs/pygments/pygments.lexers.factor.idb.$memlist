@@ -1,0 +1,13 @@
+Text
+Comment
+bygroups
+__all__
+FactorLexer
+Number
+words
+Name
+default
+RegexLexer
+Keyword
+re
+String

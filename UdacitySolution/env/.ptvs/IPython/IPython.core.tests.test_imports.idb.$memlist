@@ -1,0 +1,17 @@
+test_import_prompts
+test_import_excolors
+test_import_getipython
+test_import_release
+test_import_interactiveshell
+test_import_history
+test_import_logger
+test_import_debugger
+test_import_completer
+test_import_crashhandler
+test_import_magic
+test_import_macro
+test_import_oinspect
+test_import_hooks
+test_import_ultratb
+test_import_usage
+test_import_prefilter

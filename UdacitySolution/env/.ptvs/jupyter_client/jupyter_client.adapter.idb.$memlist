@@ -1,0 +1,14 @@
+adapters
+V4toV5
+_identifier
+V5toV4
+Adapter
+json
+adapt
+_version_str_to_list
+_match_bracket
+extract_oname_v4
+code_to_line
+_end_bracket
+re
+protocol_version_info

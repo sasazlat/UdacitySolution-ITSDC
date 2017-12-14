@@ -1,0 +1,16 @@
+activate_matplotlib
+_reshow_nbagg_figure
+BytesIO
+mpl_runner
+find_gui_and_backend
+import_pylab
+flag_calls
+retina_figure
+_pngxy
+configure_inline_support
+getfigs
+backends
+backend2gui
+figsize
+select_figure_formats
+print_figure

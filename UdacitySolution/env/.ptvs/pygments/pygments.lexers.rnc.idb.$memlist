@@ -1,0 +1,10 @@
+Text
+Name
+Comment
+__all__
+RNCCompactLexer
+Punctuation
+Operator
+RegexLexer
+Keyword
+String

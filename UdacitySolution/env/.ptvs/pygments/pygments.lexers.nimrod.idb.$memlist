@@ -1,0 +1,15 @@
+Text
+Operator
+Comment
+__all__
+NimrodLexer
+re
+Number
+Punctuation
+Name
+default
+RegexLexer
+Keyword
+Error
+include
+String

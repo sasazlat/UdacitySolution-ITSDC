@@ -1,0 +1,10 @@
+magic_gui_arg
+Application
+skip_doctest
+magic_arguments
+magics_class
+backends
+Magics
+PylabMagics
+warn
+line_magic

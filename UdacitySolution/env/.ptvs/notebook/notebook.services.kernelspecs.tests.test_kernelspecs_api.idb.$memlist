@@ -1,0 +1,16 @@
+NATIVE_KERNEL_NAME
+requests
+KernelSpecAPI
+json
+os
+url_escape
+pjoin
+some_resource
+APITest
+sample_kernel_json
+io
+NotebookTestBase
+errno
+assert_http_error
+url_path_join
+shutil

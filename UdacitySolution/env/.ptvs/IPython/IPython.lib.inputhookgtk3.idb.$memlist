@@ -1,0 +1,5 @@
+Gtk
+GLib
+sys
+_main_quit
+inputhook_gtk3

@@ -1,0 +1,16 @@
+test_linux
+nt
+test_deliberately_broken2
+test_osx
+doctest_bad
+dec
+FooClass
+test_deliberately_broken
+sys
+call_doctest_bad
+getargspec
+test_skip_dt_decorator
+test_win32
+test_skip_dt_decorator2
+inspect
+trivial

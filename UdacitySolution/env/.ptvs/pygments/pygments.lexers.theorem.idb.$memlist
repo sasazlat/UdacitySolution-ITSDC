@@ -1,0 +1,17 @@
+default
+String
+IsabelleLexer
+Keyword
+Punctuation
+Comment
+CoqLexer
+__all__
+Number
+Operator
+re
+Text
+Name
+words
+RegexLexer
+Generic
+LeanLexer

@@ -1,0 +1,17 @@
+sys
+find_connection_file
+str_to_bytes
+jupyter_client
+Popen
+filefind
+get_connection_info
+_find_connection_file
+absolute_import
+__all__
+get_ipython_dir
+get_connection_file
+warnings
+json
+PIPE
+ProfileDir
+connect_qtconsole

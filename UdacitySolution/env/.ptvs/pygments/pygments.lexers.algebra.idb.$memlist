@@ -1,0 +1,17 @@
+String
+re
+MathematicaLexer
+Name
+Punctuation
+Comment
+BCLexer
+GAPLexer
+__all__
+Number
+Operator
+Keyword
+Text
+words
+bygroups
+RegexLexer
+MuPADLexer

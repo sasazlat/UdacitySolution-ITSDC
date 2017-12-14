@@ -1,0 +1,13 @@
+Text
+Name
+Comment
+__all__
+Error
+Number
+Punctuation
+Operator
+RegexLexer
+Keyword
+X10Lexer
+re
+String

@@ -1,0 +1,14 @@
+Text
+Name
+Comment
+StataLexer
+builtins_base
+builtins_functions
+Number
+words
+Operator
+RegexLexer
+__all__
+Keyword
+include
+String

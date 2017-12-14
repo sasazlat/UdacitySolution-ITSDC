@@ -1,0 +1,10 @@
+CS_ESCAPE
+escape
+make_charset
+FIRST_ELEMENT
+groupby
+regex_opt
+regex_opt_inner
+commonprefix
+re
+itemgetter

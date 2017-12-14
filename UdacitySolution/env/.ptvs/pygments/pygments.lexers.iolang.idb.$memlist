@@ -1,0 +1,10 @@
+Text
+Name
+Comment
+__all__
+Number
+IoLexer
+Operator
+RegexLexer
+Keyword
+String

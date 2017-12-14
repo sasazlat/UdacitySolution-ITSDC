@@ -1,0 +1,12 @@
+Text
+Name
+bygroups
+__all__
+SnobolLexer
+Number
+Punctuation
+Operator
+Comment
+RegexLexer
+Keyword
+String

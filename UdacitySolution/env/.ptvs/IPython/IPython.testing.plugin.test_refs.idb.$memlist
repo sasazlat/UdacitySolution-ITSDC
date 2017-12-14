@@ -1,0 +1,6 @@
+inspect
+doctest_ivars
+test_trivial
+doctest_refs
+doctest_runvars
+doctest_run

@@ -1,0 +1,16 @@
+no_completion_duplicates
+os
+additional_dynamic_modules
+dynamic_params
+use_filesystem_cache
+cache_directory
+auto_import_modules
+add_bracket_after_function
+case_insensitive_completion
+dynamic_params_for_other_modules
+call_signatures_validity
+_cache_directory
+dynamic_flow_information
+fast_parser
+platform
+dynamic_array_additions

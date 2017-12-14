@@ -1,0 +1,15 @@
+Input
+abstractmethod
+os
+__all__
+unicode_literals
+DummyContext
+raw_mode
+with_metaclass
+is_windows
+PipeInput
+StdinInput
+sys
+io
+ABCMeta
+cooked_mode

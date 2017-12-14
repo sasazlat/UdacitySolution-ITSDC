@@ -1,0 +1,17 @@
+sys
+nt
+module_completion
+tempfile
+onlyif_unicode_paths
+py3compat
+os
+TemporaryDirectory
+join
+MockEvent
+Test_magic_run_completer
+magic_run_completer
+Test_magic_run_completer_nonascii
+shutil
+test_bad_module_all
+test_import_invalid_module
+unittest

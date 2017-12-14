@@ -1,0 +1,10 @@
+sys
+find_connection_file
+Popen
+DeprecationWarning
+get_connection_info
+absolute_import
+get_connection_file
+warnings
+json
+connect_qtconsole

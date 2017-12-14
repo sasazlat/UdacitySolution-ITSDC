@@ -1,0 +1,11 @@
+_check_rc
+IO_THREADS
+weakref
+C
+__all__
+Context
+InterruptedSystemCall
+ffi
+ZMQError
+LINGER
+EINVAL

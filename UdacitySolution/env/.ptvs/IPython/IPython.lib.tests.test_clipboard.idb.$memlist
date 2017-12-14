@@ -1,0 +1,5 @@
+TryNext
+skip_if_no_x11
+test_clipboard_get
+nt
+ClipboardEmpty

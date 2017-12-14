@@ -1,0 +1,8 @@
+defaults
+digraphs
+registry
+unicode_literals
+input_processor
+bindings
+manager
+vi_state

@@ -1,0 +1,8 @@
+INPROCESS_KEY
+KernelManagerABC
+Session
+default
+InProcessKernelManager
+DottedObjectName
+KernelManager
+Instance

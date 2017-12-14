@@ -1,0 +1,14 @@
+get_on_completion_name
+namedtuple
+os
+absolute_import
+logging
+traceback
+__main__
+READLINE_DEBUG
+version_info
+setup_readline
+Interpreter
+split_lines
+sys
+re

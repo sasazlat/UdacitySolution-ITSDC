@@ -1,0 +1,10 @@
+test_clipboard
+test_latextools
+test_editorhooks
+test_display
+test_lexers
+test_deepreload
+test_imports
+test_pretty
+test_security
+test_backgroundjobs

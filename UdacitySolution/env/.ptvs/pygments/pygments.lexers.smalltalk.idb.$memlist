@@ -1,0 +1,15 @@
+Text
+Comment
+bygroups
+__all__
+Punctuation
+Number
+Name
+Operator
+default
+RegexLexer
+NewspeakLexer
+Keyword
+SmalltalkLexer
+include
+String

@@ -1,0 +1,12 @@
+make_color_table
+os
+__all__
+NoColors
+TermColors
+value
+InputTermColors
+Struct
+name
+color_templates
+ColorSchemeTable
+ColorScheme

@@ -1,0 +1,11 @@
+os
+nt
+BaseIPythonApplication
+Unicode
+test_unicode_cwd
+test_cli_priority
+test_unicode_ipdir
+py3compat
+TemporaryDirectory
+dec
+tempfile

@@ -1,0 +1,8 @@
+test_UnicodeStdStream
+skipif
+PY3
+test_UnicodeStdStream_nowrap
+stdlib_io
+StringIO
+unicode_std_stream
+sys

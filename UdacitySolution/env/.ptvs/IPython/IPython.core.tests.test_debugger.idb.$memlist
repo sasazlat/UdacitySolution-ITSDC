@@ -1,0 +1,11 @@
+debugger
+nt
+can_quit
+test_ipdb_magics
+test_longer_repr
+warnings
+can_exit
+test_ipdb_magics2
+PdbTestInput
+sys
+_FakeInput

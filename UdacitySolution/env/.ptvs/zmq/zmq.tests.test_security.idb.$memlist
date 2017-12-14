@@ -1,0 +1,10 @@
+USER
+SkipTest
+TestSecurity
+os
+PASS
+Thread
+BaseZMQTestCase
+z85
+zmq
+PYPY

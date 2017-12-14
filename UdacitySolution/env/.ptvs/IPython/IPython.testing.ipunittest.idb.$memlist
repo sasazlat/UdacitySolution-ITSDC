@@ -1,0 +1,11 @@
+IPython2PythonConverter
+count_failures
+ipdocstring
+unittest
+ip2py
+Doc2UnitTester
+DocTestRunner
+ipdoctest
+DocTestFinder
+re
+TestResults

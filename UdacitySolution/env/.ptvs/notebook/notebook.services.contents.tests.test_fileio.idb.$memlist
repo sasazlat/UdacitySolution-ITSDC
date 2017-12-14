@@ -1,0 +1,13 @@
+atomic_writing
+test_atomic_writing
+os
+skip_win32
+test_atomic_writing_umask
+test_atomic_writing_newlines
+_save_umask
+stdlib_io
+stat
+nt
+TemporaryDirectory
+umask
+_restore_umask

@@ -1,0 +1,17 @@
+test_openpy
+test_tempdir
+test_imports
+test_shimmodule
+test_text
+test_capture
+test_dir2
+test_module_paths
+test_sysinfo
+test_path
+test_decorators
+test_process
+test_importstring
+test_tokenutil
+test_pycolorize
+test_io
+test_wildcard

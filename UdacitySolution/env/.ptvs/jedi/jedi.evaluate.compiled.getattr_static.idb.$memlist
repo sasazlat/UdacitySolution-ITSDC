@@ -1,0 +1,17 @@
+_shadowed_dict_newstyle
+_sentinel
+_OldStyleClass
+_shadowed_dict
+types
+_oldstyle_class_type
+_get_type
+getattr_static
+_safe_is_data_descriptor
+_static_getmro_newstyle
+_check_class
+_check_instance
+py_version
+_static_getmro
+_oldstyle_instance_type
+_is_type
+_safe_hasattr

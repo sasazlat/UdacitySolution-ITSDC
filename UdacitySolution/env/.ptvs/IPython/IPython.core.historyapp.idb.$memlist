@@ -1,0 +1,13 @@
+HistoryClear
+Application
+clear_hist_help
+os
+Bool
+HistoryApp
+sqlite3
+Int
+HistoryTrim
+Dict
+BaseIPythonApplication
+trim_hist_help
+ask_yes_no

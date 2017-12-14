@@ -1,0 +1,11 @@
+Text
+Name
+Comment
+APLLexer
+__all__
+Number
+Punctuation
+Operator
+RegexLexer
+Keyword
+String

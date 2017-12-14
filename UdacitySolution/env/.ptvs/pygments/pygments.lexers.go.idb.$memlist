@@ -1,0 +1,14 @@
+Text
+Comment
+bygroups
+__all__
+GoLexer
+Punctuation
+Number
+words
+Name
+Operator
+RegexLexer
+Keyword
+re
+String

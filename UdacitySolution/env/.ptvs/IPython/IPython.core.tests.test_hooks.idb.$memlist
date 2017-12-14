@@ -1,0 +1,8 @@
+test_command_chain_dispatcher_fofo
+test_command_chain_dispatcher_ff
+nt
+Okay
+Fail
+CommandChainDispatcher
+TryNext
+test_command_chain_dispatcher_eq_priority

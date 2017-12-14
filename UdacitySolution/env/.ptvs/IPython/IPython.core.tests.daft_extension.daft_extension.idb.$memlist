@@ -1,0 +1,3 @@
+unload_ipython_extension
+some_vars
+load_ipython_extension

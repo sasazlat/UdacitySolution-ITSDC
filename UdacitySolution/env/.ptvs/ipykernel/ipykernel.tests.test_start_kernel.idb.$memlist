@@ -1,0 +1,5 @@
+setup_kernel
+test_ipython_start_kernel_no_userns
+nt
+test_ipython_start_kernel_userns
+TIMEOUT
