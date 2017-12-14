@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>d6ca49de-d7aa-472f-86d4-91e2098ee80b</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>robot_localization.py</StartupFile>
+    <StartupFile>22_inexact_move_function.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,6 +21,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="22_inexact_move_function.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="RobotLocalization.py" />
     <Compile Include="robot_localization.py">
       <SubType>Code</SubType>
