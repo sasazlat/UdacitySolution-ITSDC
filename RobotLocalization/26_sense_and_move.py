@@ -1,6 +1,7 @@
 #Modify the move function to accommodate the added
 #probabilities of overshooting or undershooting
 #the intended destination.
+#Entropy formula  Entropy = Sigma (-p \times log(p)), we get -5 \times (.2)\times log(0.2) = 0.699.
 p = [0.2,0.2,0.2,0.2,0.2]
 world = ['green', 'red', 'red', 'green', 'green']
 measurements = ['red', 'green']
