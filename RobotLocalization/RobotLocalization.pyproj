@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>d6ca49de-d7aa-472f-86d4-91e2098ee80b</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>sense_functio1.py</StartupFile>
+    <StartupFile>26_sense_and_move.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>

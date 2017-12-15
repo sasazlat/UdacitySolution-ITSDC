@@ -1,9 +1,11 @@
-#Modify the move function to accommodate the added
-#probabilities of overshooting or undershooting
-#the intended destination.
-#Entropy formula  Entropy = Sigma (-p \times log(p)), we get -5 \times (.2)\times log(0.2) = 0.699.
-p = [0.2,0.2,0.2,0.2,0.2]
-world = ['green', 'red', 'red', 'green', 'green']
+#Given the list motions=[1,1] which means the robot 
+#moves right and then right again, compute the posterior 
+#distribution if the robot first senses red, then moves 
+#right one, then senses green, then moves right again, 
+#starting with a uniform prior distribution.
+
+p=[0.2, 0.2, 0.2, 0.2, 0.2]
+world=['green', 'red', 'red', 'green', 'green']
 measurements = ['red', 'green']
 motions = [1,1]
 pHit = 0.6
@@ -13,10 +15,10 @@ pOvershoot = 0.1
 pUndershoot = 0.1
 
 def sense(p, Z):
-    q = []
+    q=[]
     for i in range(len(p)):
         hit = (Z == world[i])
-        q.append(p[i] * (hit * pHit + (1 - hit) * pMiss))
+        q.append(p[i] * (hit * pHit + (1-hit) * pMiss))
     s = sum(q)
     for i in range(len(q)):
         q[i] = q[i] / s
@@ -24,26 +26,16 @@ def sense(p, Z):
 
 def move(p, U):
     q = []
-    UU = U % len(p)
     for i in range(len(p)):
-        s = pExact * p[(i - U) % len(p)]
-        s = s + pOvershoot * p[(i - U - 1) % len(p)]
-        s = s + pUndershoot * p[(i - U + 1) % len(p)]
+        s = pExact * p[(i-U) % len(p)]
+        s = s + pOvershoot * p[(i-U-1) % len(p)]
+        s = s + pUndershoot * p[(i-U+1) % len(p)]
         q.append(s)
     return q
-
-
-def move_moja(p, U):    
-    q = [0] * len(p)
-    for i in range(len(p)):
-        q[i] += p[(-U + i) % len(p)] * pExact + p[(-U + i - 1) % len(p)] * pOvershoot + p[(-U + i + 1) % len(p)] * pUndershoot
-    return q
-
-
-for k in range(1000):
-    p = move(p, 1)
-
-print(p)
-
-
-
+#
+# ADD CODE HERE
+#
+for i in range(len(motions)):
+    p = sense(p,measurements[i])
+    p = move(p, motions[i])
+print (p)         
