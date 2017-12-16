@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>d6ca49de-d7aa-472f-86d4-91e2098ee80b</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>26_sense_and_move.py</StartupFile>
+    <StartupFile>zavrsni\writeup.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -36,6 +36,21 @@
     <Compile Include="sense_function.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="zavrsni\helpers.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zavrsni\localizer.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zavrsni\simulate.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zavrsni\writeup.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="zavrsni\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
