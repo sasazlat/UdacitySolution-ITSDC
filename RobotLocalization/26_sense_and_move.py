@@ -4,7 +4,7 @@
 #right one, then senses green, then moves right again,
 #starting with a uniform prior distribution.
 p = [0.2, 0.2, 0.2, 0.2, 0.2]
-world = ['green', 'red', 'red', 'green', 'green']
+grid = ['green', 'red', 'red', 'green', 'green']
 measurements = ['red', 'green']
 motions = [1,1]
 pHit = 0.6
@@ -16,7 +16,7 @@ pUndershoot = 0.1
 def sense(p, Z):
     q = []
     for i in range(len(p)):
-        hit = (Z == world[i])
+        hit = (Z == grid[i])
         q.append(p[i] * (hit * pHit + (1 - hit) * pMiss))
     s = sum(q)
     #Normalizacija
