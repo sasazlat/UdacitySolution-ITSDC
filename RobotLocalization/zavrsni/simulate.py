@@ -19,7 +19,7 @@ class Simulation(object):
 		self.colors = self.get_colors()
 		self.num_colors = len(self.colors)
 		if not start_pos:
-			self.true_pose = (self.height / 2, self.width / 2)
+			self.true_pose = ((int)(self.height / 2),(int) (self.width / 2))
 		else:
 			self.true_pose = start_pos
 		self.prev_pose = self.true_pose
@@ -30,6 +30,7 @@ class Simulation(object):
 		self.Y = []
 		self.P = []
 
+    #this function creates one-dimensional list of grid elements
 	def get_colors(self):
 		all_colors = []
 		for row in self.grid:
@@ -60,7 +61,7 @@ class Simulation(object):
 
 	def get_observed_color(self):
 		y,x = self.true_pose
-		true_color = self.grid[y][x]
+		true_color =  self.grid[y][x]
 		if random.random() < self.incorrect_sense_probability:
 			possible_colors = []
 			for color in self.colors:
