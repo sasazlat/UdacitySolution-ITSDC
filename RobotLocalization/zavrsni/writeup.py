@@ -67,11 +67,23 @@ import localizer
 # the initial beliefs.
 R = 'r'
 G = 'g'
-grid = [[R,G,G,G,R],
-    [G,G,R,G,R],
-    [G,R,G,G,G],
-    [R,R,G,R,G],
-    [R,G,R,G,R],]
+
+
+#grid = [[R,G,G,G,R],
+#    [G,G,R,G,R],
+#    [G,R,G,G,G],
+#    [R,R,G,R,G],
+#    [R,G,R,G,R],]
+
+
+grid = [ 
+    [R,G,G,G,R,R,R],
+    [G,G,R,G,R,G,R],
+    [G,R,G,G,G,G,R],
+    [R,R,G,R,G,G,G],
+]
+
+
 blur = 0.05
 p_hit = 200.0
 simulation = sim.Simulation(grid, blur, p_hit)
