@@ -24,7 +24,8 @@
 
 # In[1]:
 import numpy as np
-import car
+import car1 as car
+import color
 
 #get_ipython().run_line_magic('matplotlib', 'inline')
 
@@ -54,6 +55,7 @@ carla = car.Car(initial_position, velocity, world)
 
 print('Carla\'s initial state is: ' + str(carla.state))
 
+carla.display_world()
 
 # ### Move and track state
 
@@ -81,6 +83,43 @@ carla.display_world()
 
 
 ## TODO: Make carla traverse a 4x4 square path
+carla.move()
+carla.move()
+
+carla.turn_right()
+
+carla.move()
+carla.move()
+carla.move()
+
+carla.turn_right()
+
+carla.move()
+carla.move()
+carla.move()
+
+carla.turn_right()
+
+carla.move()
+carla.move()
+carla.move()
+carla.display_world()
+
+carlo = car.Car([0,2],[1,0],world, 'y')
+carlo.display_world()
+carlo.display_world()
+carlo.move()
+carlo.move()
+carlo.turn_right()
+carlo.display_world()
 ## Display the result
 
+r = 200
+g = 0
+b = 200
 
+# Create the color object
+test_color = color.Color(r, g, b)
+
+# This will throw an error if the class code is incomplete
+print(test_color)

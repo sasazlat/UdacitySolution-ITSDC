@@ -24,6 +24,12 @@
     <Compile Include="car.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="car1.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="color.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="InteractingWithCarObject.py" />
   </ItemGroup>
   <ItemGroup>
