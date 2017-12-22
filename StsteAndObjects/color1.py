@@ -31,7 +31,12 @@ class Color(object):
            and averaging them. 
            The new Color object, with these averaged rgb values, 
            is returned.'''
-        pass
+        new_r = (self.r + other.r)/2.
+        new_b = (self.b + other.b)/2.
+        new_g = (self.g + other.g)/2.
+        return Color(new_r, new_g, new_b)
+
+       
 
 
 

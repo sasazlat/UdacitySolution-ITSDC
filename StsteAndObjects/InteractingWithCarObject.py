@@ -25,7 +25,7 @@
 # In[1]:
 import numpy as np
 import car1 as car
-import color
+import color1
 
 #get_ipython().run_line_magic('matplotlib', 'inline')
 
@@ -119,7 +119,8 @@ g = 0
 b = 200
 
 # Create the color object
-test_color = color.Color(r, g, b)
+test_color = color1.Color(r, g, b)
+test_color2 = color1.Color(100, 55, 23)
 
 # This will throw an error if the class code is incomplete
-print(test_color)
+print(test_color + test_color2)
