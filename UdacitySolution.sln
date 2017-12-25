@@ -13,6 +13,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "RobotLocalization", "RobotL
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "StsteAndObjects", "StsteAndObjects\StsteAndObjects.pyproj", "{3B0FCBCC-7288-4852-B004-63E67104D241}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Matrices", "Matrices\Matrices.pyproj", "{31149B22-081E-4172-9829-DFC1F56990FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,12 @@ Global
 		{3B0FCBCC-7288-4852-B004-63E67104D241}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B0FCBCC-7288-4852-B004-63E67104D241}.Release|x64.ActiveCfg = Release|Any CPU
 		{3B0FCBCC-7288-4852-B004-63E67104D241}.Release|x86.ActiveCfg = Release|Any CPU
+		{31149B22-081E-4172-9829-DFC1F56990FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31149B22-081E-4172-9829-DFC1F56990FF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{31149B22-081E-4172-9829-DFC1F56990FF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{31149B22-081E-4172-9829-DFC1F56990FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31149B22-081E-4172-9829-DFC1F56990FF}.Release|x64.ActiveCfg = Release|Any CPU
+		{31149B22-081E-4172-9829-DFC1F56990FF}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
