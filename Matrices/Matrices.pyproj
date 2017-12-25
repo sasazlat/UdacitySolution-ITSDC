@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>31149b22-081e-4172-9829-dfc1f56990ff</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>2_matrices_in_python.py</StartupFile>
+    <StartupFile>4_matrix_multiplication.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -26,6 +26,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="2_matrices_in_python.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="3_matrix_addition.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="4_matrix_multiplication.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
