@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>31149b22-081e-4172-9829-dfc1f56990ff</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>4_matrix_multiplication.py</StartupFile>
+    <StartupFile>5_matrix_transpose.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -32,6 +32,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="4_matrix_multiplication.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="5_matrix_transpose.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

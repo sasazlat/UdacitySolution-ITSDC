@@ -254,8 +254,7 @@ assert get_column([[5]], 0) == [5]
 
 ### HINT: You wrote this function previously in the vector coding
 ###        exercises
-def dot_product(vector_one, vector_two):
-    
+def dot_product(vector_one, vector_two):    
     return sum(x[0] * x[1] for x in zip(vector_one, vector_two))
 
 
