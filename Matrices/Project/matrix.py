@@ -40,6 +40,15 @@ class Matrix(object):
             raise(NotImplementedError, "Calculating determinant not implemented for matrices largerer than 2x2.")
         
         # TODO - your code here
+        if self.h == 2:
+            a = self.g[0][0]
+            b = self.g[0][1]
+            c = self.g[1][0]
+            d = self.g[1][1]
+            if (a * d - b * c) == 0:
+                raise ValueError('The denominator of a fraction cannot be zero')
+            else:
+                return a * d - b * c
 
     def trace(self):
         """
@@ -49,6 +58,7 @@ class Matrix(object):
             raise(ValueError, "Cannot calculate the trace of a non-square matrix.")
 
         # TODO - your code here
+        return self.g[0][0] + self.g[1][1]
 
     def inverse(self):
         """
@@ -59,13 +69,41 @@ class Matrix(object):
         if self.h > 2:
             raise(NotImplementedError, "inversion not implemented for matrices larger than 2x2.")
 
-        # TODO - your code here
+            # TODO - your code here
+        inverse = []
+        ## TODO: Check if matrix is 1x1 or 2x2.
+        ## Depending on the matrix size, the formula for calculating
+        ## the inverse is different
+        if len(self.g) == 1:
+            inverse.append([1. / self.g[0][0]])
+        else:
+            a = self.g[0][0]
+            b = self.g[0][1]
+            c = self.g[1][0]
+            d = self.g[1][1]
+            if (self.determinant()) == 0:
+                raise ValueError('The denominator of a fraction cannot be zero')
+            else:
+                detA = self.determinant()
+                inverse = [[d / detA, -b / detA],[-c / detA, a / detA]]
+
+    
+        ## TODO: Calculate the inverse of the square 1x1 or 2x2 matrix.
+    
+        return inverse
 
     def T(self):
         """
         Returns a transposed copy of this Matrix.
         """
         # TODO - your code here
+        matrix_transpose = []
+        for j in range(self.h):
+            temp_t = []
+            for i in range(self.w):
+                temp_t.append(self.g[i][j])
+            matrix_transpose.append(temp_t)
+        return matrix_transpose
 
     def is_square(self):
         return self.h == self.w
@@ -108,6 +146,25 @@ class Matrix(object):
         #
         # TODO - your code here
         #
+        # initialize matrix to hold the results
+        matrixSum = []
+    
+        # matrix to hold a row for appending sums of each element
+        row = []
+    
+        # TODO: write a for loop within a for loop to iterate over
+        # the matrices
+        for m in range(self.w):
+            for n in range(self.h):
+                row.append(self.g[m][n] + other[m][n])
+        # TODO: As you iterate through the matrices, add matching
+        # elements and append the sum to the row variable
+    
+        # TODO: When a row is filled, append the row to matrixSum.
+        # Then reinitialize row as an empty list
+            matrixSum.append(row)
+            row = []
+        return matrixSum
 
     def __neg__(self):
         """
