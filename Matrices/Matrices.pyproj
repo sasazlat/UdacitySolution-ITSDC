@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>31149b22-081e-4172-9829-dfc1f56990ff</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>5_matrix_transpose.py</StartupFile>
+    <StartupFile>6_inverse_matrix.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -37,6 +37,33 @@
     <Compile Include="5_matrix_transpose.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="6_inverse_matrix.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="7_identity_matrix.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Project\datagenerator.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Project\kalman_filter_demo.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Project\matrix.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Project\matrix_cheat_sheet.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Project\matrix_playground.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Project\test.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Project\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

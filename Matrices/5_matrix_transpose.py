@@ -59,7 +59,7 @@ assert transpose([[5, 3, 2], [7, 1, 4], [1, 1, 2], [8, 9, 1]]) == [[5, 7, 1, 8],
 ### TODO: Copy your dot_product() function here so that you can
 ###       use it in your matrix_multiplication function
 def dot_product(vector_one, vector_two):    
-    return sum(x[0] * x[1] for x in zip(vector_one, vector_two))
+    return sum(i * j for i,j in zip(vector_one, vector_two))
 
 def matrix_multiplication(matrixA, matrixB):
     product = []
