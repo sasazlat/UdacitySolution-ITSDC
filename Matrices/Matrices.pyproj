@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>31149b22-081e-4172-9829-dfc1f56990ff</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Project\kalman_filter_demo.py</StartupFile>
+    <StartupFile>Project\matrix_playground.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
