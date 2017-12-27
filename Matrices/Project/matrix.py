@@ -37,8 +37,7 @@ class Matrix(object):
         if not self.is_square():
             raise(ValueError, "Cannot calculate determinant of non-square matrix.")
         if self.h > 2:
-            raise(NotImplementedError, "Calculating determinant not implemented for matrices largerer than 2x2.")
-        
+            raise(NotImplementedError, "Calculating determinant not implemented for matrices largerer than 2x2.")        
         # TODO - your code here
         if self.h == 2:
             a = self.g[0][0]
@@ -58,7 +57,7 @@ class Matrix(object):
             raise(ValueError, "Cannot calculate the trace of a non-square matrix.")
 
         # TODO - your code here
-        return self.g[0][0] + self.g[1][1]
+        return sum(self.g[i][i] for i in range(self.h))
 
     def inverse(self):
         """
@@ -68,10 +67,9 @@ class Matrix(object):
             raise(ValueError, "Non-square Matrix does not have an inverse.")
         if self.h > 2:
             raise(NotImplementedError, "inversion not implemented for matrices larger than 2x2.")
-
-            # TODO - your code here
+        # TODO - your code here
         inverse = []
-        ## TODO: Check if matrix is 1x1 or 2x2.
+        ## Check if matrix is 1x1 or 2x2.
         ## Depending on the matrix size, the formula for calculating
         ## the inverse is different
         if len(self.g) == 1:
@@ -85,12 +83,8 @@ class Matrix(object):
                 raise ValueError('The denominator of a fraction cannot be zero')
             else:
                 detA = self.determinant()
-                inverse = [[d / detA, -b / detA],[-c / detA, a / detA]]
-
-    
-        ## TODO: Calculate the inverse of the square 1x1 or 2x2 matrix.
-    
-        return inverse
+                inverse = [[d / detA, -b / detA],[-c / detA, a / detA]]    
+        return Matrix(inverse)
 
     def T(self):
         """
@@ -98,12 +92,12 @@ class Matrix(object):
         """
         # TODO - your code here
         matrix_transpose = []
-        for j in range(self.h):
+        for j in range(self.w):
             temp_t = []
-            for i in range(self.w):
+            for i in range(self.h):
                 temp_t.append(self.g[i][j])
             matrix_transpose.append(temp_t)
-        return matrix_transpose
+        return Matrix(matrix_transpose)
 
     def is_square(self):
         return self.h == self.w
@@ -147,24 +141,16 @@ class Matrix(object):
         # TODO - your code here
         #
         # initialize matrix to hold the results
-        matrixSum = []
-    
-        # matrix to hold a row for appending sums of each element
-        row = []
-    
-        # TODO: write a for loop within a for loop to iterate over
+        matrixSum = []    
+        # write a for loop within a for loop to iterate over
         # the matrices
-        for m in range(self.w):
-            for n in range(self.h):
-                row.append(self.g[m][n] + other[m][n])
-        # TODO: As you iterate through the matrices, add matching
-        # elements and append the sum to the row variable
-    
-        # TODO: When a row is filled, append the row to matrixSum.
-        # Then reinitialize row as an empty list
-            matrixSum.append(row)
+        for m in range(self.h):
+            # matrix to hold a row for appending sums of each element
             row = []
-        return matrixSum
+            for n in range(self.w):
+                row.append(self.g[m][n] + other[m][n])
+            matrixSum.append(row)
+        return Matrix(matrixSum)
 
     def __neg__(self):
         """
@@ -181,22 +167,64 @@ class Matrix(object):
         #
         # TODO - your code here
         #
+        matrixNeg = []    
+        # write a for loop within a for loop to iterate over
+        # the matrices
+        for m in range(self.h):
+            # matrix to hold a row
+            row = []    
+            for n in range(self.w):
+                row.append(-(self.g[m][n]))
+            matrixNeg.append(row)
+        return Matrix(matrixNeg)
+
 
     def __sub__(self, other):
         """
         Defines the behavior of - operator (as subtraction)
         """
+        if self.h != other.h or self.w != other.w:
+            raise(ValueError, "Matrices can only be subtituted if the dimensions are the same") 
         #
         # TODO - your code here
         #
+        matrixSub = []    
+        # write a for loop within a for loop to iterate over
+        # the matrices
+        for m in range(self.h):
+            # matrix to hold a row for appending sums of each element
+            row = []
+            for n in range(self.w):
+                row.append(self.g[m][n] - other[m][n])
+            matrixSub.append(row)
+        return Matrix(matrixSub)
+
 
     def __mul__(self, other):
         """
         Defines the behavior of * operator (matrix multiplication)
         """
+        if self.w != other.h:
+            raise(ValueError, "Matrices can only be multiplied  if the dimensions of columns of the first and rows of the second are the same ") 
+        
+        # Transpose other matrix
+        other_T = other.T()
+        # Dot product of two vectors of 1xn dimensions
+        def dot_product(vector_one, vector_two):    
+            return sum(i * j for i,j in zip(vector_one, vector_two))
         #
         # TODO - your code here
         #
+        matrixMul = []    
+        # matrix to hold a row for appending sums of each element
+        for self_row in self.g:
+            temp = []
+            for other_T_row in other_T.g:
+                temp.append(dot_product(self_row,other_T_row))
+            matrixMul.append(temp)
+
+        return Matrix(matrixMul)
+
 
     def __rmul__(self, other):
         """
@@ -211,8 +239,15 @@ class Matrix(object):
           0.0  2.0
         """
         if isinstance(other, numbers.Number):
-            pass
             #   
             # TODO - your code here
             #
+            matr = []
+            for r in self.g:
+                row = []
+                for c in r:
+                    row.append(other * c)
+                matr.append(row)
+            return Matrix(matr)
+
             

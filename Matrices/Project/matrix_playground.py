@@ -5,8 +5,8 @@
 
 
 # Run this cell but don't modify it.
-get_ipython().run_line_magic('load_ext', 'autoreload')
-get_ipython().run_line_magic('autoreload', '2')
+#get_ipython().run_line_magic('load_ext', 'autoreload')
+#get_ipython().run_line_magic('autoreload', '2')
 from matrix import Matrix, zeroes, identity
 
 
@@ -41,16 +41,62 @@ print("run the cell below to see what happens when we try...")
 
 # In[ ]:
 
-m1 = Matrix([[1, 2],
-    [3, 4]])
+m1 = Matrix([
+    [1, 2],
+    [3, 4]
+])
 
-m2 = Matrix([[2, 5],
-    [6, 1]])
+m2 = Matrix([
+    [2, 5],
+    [6, 1]
+])
 
 m3 = m1 + m2
 print("m1 + m2 is")
 print(m3)
 
+m3 = m1 - m2
+print("m1 - m2 is")
+print(m3)
+
+m3 = m1 * m2
+print("m1 * m2 is")
+print(m3)
+
+neg = -m3
+print("-m3 is")
+print(neg)
+
+m1 = Matrix([[1,2,3],
+        [4,5,6]])
+
+m2 = Matrix([[7,-2],
+        [-3,-5],
+        [4,1]])
+
+m1_x_m2 = Matrix([[13,  -9],
+        [37, -27]])
+
+m2_x_m1 = Matrix([[-1,   4,   9],
+        [-23, -31, -39],
+        [8,  13,  18]])
+
+m1_m2_inv = Matrix([[1.5, -0.5],
+        [2.0555556, -0.722222222]])
+
+m3 = m1 * m2
+print("m1 * m2 is")
+print(m3)
+
+m3 = m2 * m1
+print("m2 * m1 is")
+print(m3)
+
+neg = -m3
+print("-m3 is")
+print(neg)
+
+m1_m2_inv1 = m1_x_m2.inverse()
 
 # In[ ]:
 
