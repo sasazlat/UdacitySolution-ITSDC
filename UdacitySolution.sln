@@ -11,7 +11,7 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PprobabilityDistribution", 
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "RobotLocalization", "RobotLocalization\RobotLocalization.pyproj", "{D6CA49DE-D7AA-472F-86D4-91E2098EE80B}"
 EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "StsteAndObjects", "StsteAndObjects\StsteAndObjects.pyproj", "{3B0FCBCC-7288-4852-B004-63E67104D241}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "StateAndObjects", "StsteAndObjects\StateAndObjects.pyproj", "{3B0FCBCC-7288-4852-B004-63E67104D241}"
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Matrices", "Matrices\Matrices.pyproj", "{31149B22-081E-4172-9829-DFC1F56990FF}"
 EndProject
