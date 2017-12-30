@@ -15,6 +15,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "StsteAndObjects", "StsteAnd
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Matrices", "Matrices\Matrices.pyproj", "{31149B22-081E-4172-9829-DFC1F56990FF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "udacity_cpp_histogram_filter_project", "udacity_cpp_histogram_filter_project\udacity_cpp_histogram_filter_project.vcxproj", "{AB51233C-3153-454A-B3CF-CB3501C84AC9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,6 +67,16 @@ Global
 		{31149B22-081E-4172-9829-DFC1F56990FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31149B22-081E-4172-9829-DFC1F56990FF}.Release|x64.ActiveCfg = Release|Any CPU
 		{31149B22-081E-4172-9829-DFC1F56990FF}.Release|x86.ActiveCfg = Release|Any CPU
+		{AB51233C-3153-454A-B3CF-CB3501C84AC9}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{AB51233C-3153-454A-B3CF-CB3501C84AC9}.Debug|x64.ActiveCfg = Debug|x64
+		{AB51233C-3153-454A-B3CF-CB3501C84AC9}.Debug|x64.Build.0 = Debug|x64
+		{AB51233C-3153-454A-B3CF-CB3501C84AC9}.Debug|x86.ActiveCfg = Debug|Win32
+		{AB51233C-3153-454A-B3CF-CB3501C84AC9}.Debug|x86.Build.0 = Debug|Win32
+		{AB51233C-3153-454A-B3CF-CB3501C84AC9}.Release|Any CPU.ActiveCfg = Release|Win32
+		{AB51233C-3153-454A-B3CF-CB3501C84AC9}.Release|x64.ActiveCfg = Release|x64
+		{AB51233C-3153-454A-B3CF-CB3501C84AC9}.Release|x64.Build.0 = Release|x64
+		{AB51233C-3153-454A-B3CF-CB3501C84AC9}.Release|x86.ActiveCfg = Release|Win32
+		{AB51233C-3153-454A-B3CF-CB3501C84AC9}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
