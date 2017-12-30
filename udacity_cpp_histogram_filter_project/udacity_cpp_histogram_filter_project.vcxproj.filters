@@ -15,30 +15,30 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\sasazlat\Desktop\udacity_cpp_histogram_filter_project\debugging_helpers.cpp">
+    <ClCompile Include="debugging_helpers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\sasazlat\Desktop\udacity_cpp_histogram_filter_project\helpers.cpp">
+    <ClCompile Include="helpers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\sasazlat\Desktop\udacity_cpp_histogram_filter_project\localizer.cpp">
+    <ClCompile Include="localizer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\sasazlat\Desktop\udacity_cpp_histogram_filter_project\simulate.cpp">
+    <ClCompile Include="simulate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\sasazlat\Desktop\udacity_cpp_histogram_filter_project\tests.cpp">
+    <ClCompile Include="tests.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="C:\Users\sasazlat\Desktop\udacity_cpp_histogram_filter_project\maps\half_red.txt">
+    <Text Include="half_red.txt">
       <Filter>Resource Files</Filter>
     </Text>
-    <Text Include="C:\Users\sasazlat\Desktop\udacity_cpp_histogram_filter_project\maps\m1.txt">
+    <Text Include="m1.txt">
       <Filter>Resource Files</Filter>
     </Text>
-    <Text Include="C:\Users\sasazlat\Desktop\udacity_cpp_histogram_filter_project\maps\m2.txt">
+    <Text Include="m2.txt">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>
