@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "UdacitySolution", "UdacitySolution\UdacitySolution.pyproj", "{566F8074-1581-487D-9E6A-371D8D88428B}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Cppproject", "Cppproject\Cppproject.vcxproj", "{03B6AE7A-1DEB-48D1-A688-8BB269C839E7}"
-EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PprobabilityDistribution", "PprobabilityDistribution\PprobabilityDistribution.pyproj", "{C764AD8A-A5CE-43F3-B4B9-15F1EF769486}"
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "RobotLocalization", "RobotLocalization\RobotLocalization.pyproj", "{D6CA49DE-D7AA-472F-86D4-91E2098EE80B}"
@@ -33,16 +31,6 @@ Global
 		{566F8074-1581-487D-9E6A-371D8D88428B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{566F8074-1581-487D-9E6A-371D8D88428B}.Release|x64.ActiveCfg = Release|Any CPU
 		{566F8074-1581-487D-9E6A-371D8D88428B}.Release|x86.ActiveCfg = Release|Any CPU
-		{03B6AE7A-1DEB-48D1-A688-8BB269C839E7}.Debug|Any CPU.ActiveCfg = Debug|Win32
-		{03B6AE7A-1DEB-48D1-A688-8BB269C839E7}.Debug|x64.ActiveCfg = Debug|x64
-		{03B6AE7A-1DEB-48D1-A688-8BB269C839E7}.Debug|x64.Build.0 = Debug|x64
-		{03B6AE7A-1DEB-48D1-A688-8BB269C839E7}.Debug|x86.ActiveCfg = Debug|Win32
-		{03B6AE7A-1DEB-48D1-A688-8BB269C839E7}.Debug|x86.Build.0 = Debug|Win32
-		{03B6AE7A-1DEB-48D1-A688-8BB269C839E7}.Release|Any CPU.ActiveCfg = Release|Win32
-		{03B6AE7A-1DEB-48D1-A688-8BB269C839E7}.Release|x64.ActiveCfg = Release|x64
-		{03B6AE7A-1DEB-48D1-A688-8BB269C839E7}.Release|x64.Build.0 = Release|x64
-		{03B6AE7A-1DEB-48D1-A688-8BB269C839E7}.Release|x86.ActiveCfg = Release|Win32
-		{03B6AE7A-1DEB-48D1-A688-8BB269C839E7}.Release|x86.Build.0 = Release|Win32
 		{C764AD8A-A5CE-43F3-B4B9-15F1EF769486}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C764AD8A-A5CE-43F3-B4B9-15F1EF769486}.Debug|x64.ActiveCfg = Debug|Any CPU
 		{C764AD8A-A5CE-43F3-B4B9-15F1EF769486}.Debug|x86.ActiveCfg = Debug|Any CPU
