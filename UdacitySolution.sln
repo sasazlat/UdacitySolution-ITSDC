@@ -9,8 +9,6 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PprobabilityDistribution", 
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "RobotLocalization", "RobotLocalization\RobotLocalization.pyproj", "{D6CA49DE-D7AA-472F-86D4-91E2098EE80B}"
 EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "StateAndObjects", "StsteAndObjects\StateAndObjects.pyproj", "{3B0FCBCC-7288-4852-B004-63E67104D241}"
-EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Matrices", "Matrices\Matrices.pyproj", "{31149B22-081E-4172-9829-DFC1F56990FF}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "C++Basics", "C++Basics\C++Basics.vcxproj", "{C1211116-C2C4-4F04-A244-3F92C0D384A3}"
@@ -43,12 +41,6 @@ Global
 		{D6CA49DE-D7AA-472F-86D4-91E2098EE80B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6CA49DE-D7AA-472F-86D4-91E2098EE80B}.Release|x64.ActiveCfg = Release|Any CPU
 		{D6CA49DE-D7AA-472F-86D4-91E2098EE80B}.Release|x86.ActiveCfg = Release|Any CPU
-		{3B0FCBCC-7288-4852-B004-63E67104D241}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3B0FCBCC-7288-4852-B004-63E67104D241}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{3B0FCBCC-7288-4852-B004-63E67104D241}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{3B0FCBCC-7288-4852-B004-63E67104D241}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3B0FCBCC-7288-4852-B004-63E67104D241}.Release|x64.ActiveCfg = Release|Any CPU
-		{3B0FCBCC-7288-4852-B004-63E67104D241}.Release|x86.ActiveCfg = Release|Any CPU
 		{31149B22-081E-4172-9829-DFC1F56990FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{31149B22-081E-4172-9829-DFC1F56990FF}.Debug|x64.ActiveCfg = Debug|Any CPU
 		{31149B22-081E-4172-9829-DFC1F56990FF}.Debug|x86.ActiveCfg = Debug|Any CPU
