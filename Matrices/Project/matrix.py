@@ -148,7 +148,7 @@ class Matrix(object):
             # matrix to hold a row for appending sums of each element
             row = []
             for n in range(self.w):
-                row.append(self.g[m][n] + other[m][n])
+                row.append(self.g[m][n] + other.g[m][n])
             matrixSum.append(row)
         return Matrix(matrixSum)
 
@@ -195,7 +195,7 @@ class Matrix(object):
             # matrix to hold a row for appending sums of each element
             row = []
             for n in range(self.w):
-                row.append(self.g[m][n] - other[m][n])
+                row.append(self.g[m][n] - other.g[m][n])
             matrixSub.append(row)
         return Matrix(matrixSub)
 
