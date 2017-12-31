@@ -247,6 +247,7 @@ def update_probabilities(grid, updates):
     # TODO: write a for loop that goes through the updates list and updates
     # the probabilities in the grid variable
     ###
+
    for input in updates:
        grid[input[0]] = input[1]
     
