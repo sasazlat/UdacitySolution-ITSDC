@@ -1,3 +1,6 @@
+#ifndef LOCALIZER_H
+#define LOCALIZER_H
+
 /**
 	localizer.cpp
 
@@ -45,7 +48,7 @@ vector< vector <float> > initialize_beliefs(vector< vector <char> > grid) {
 	vector<char>::size_type height = grid.size();
 	vector<char>::size_type width = grid[0].size();
 	int area = height * width;
-	float belief_per_cell = 1.0 / area;
+	float belief_per_cell = (float)1.0 / area;
 	for (size_t i = 0; i < height; i++)
 	{
 		new_row.clear();
@@ -103,7 +106,6 @@ vector< vector <float> > sense(char color,
 {
 	vector< vector <float> > newGrid;
 	vector<float> temp_beliefs;
-	float sum = 0.0;
 	// your code here
 	for (size_t y = 0; y < grid.size(); y++)
 	{
@@ -112,7 +114,6 @@ vector< vector <float> > sense(char color,
 		{
 			bool hit = (color == grid[y][x]);
 			temp_beliefs.push_back(beliefs[y][x] * (hit * p_hit + (1 - hit) * p_miss));
-			sum += temp_beliefs[x];
 		}
 		newGrid.push_back(temp_beliefs);
 	}
@@ -191,3 +192,5 @@ vector< vector <float> > move(int dy, int dx,
 
 	return blur(newGrid, blurring);
 }
+
+#endif

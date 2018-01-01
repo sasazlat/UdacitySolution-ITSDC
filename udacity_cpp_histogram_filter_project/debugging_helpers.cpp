@@ -1,3 +1,6 @@
+#ifndef DEBUGGING_HELPERS_H
+#define DEBUGGING_HELPERS_H
+
 /**
 	debugging_helpers.cpp
 
@@ -48,6 +51,9 @@ void show_grid(vector < vector <char> > map) {
 			cout << p << ' ';
 		}
 		cout << endl;
+
 	}
 }
 
+
+#endif

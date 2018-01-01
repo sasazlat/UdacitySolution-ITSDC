@@ -1,3 +1,6 @@
+#ifndef HELPERS_H
+#define HELPERS_H
+
 /**
 	helpers.cpp
 
@@ -15,7 +18,7 @@
 #include <cmath>
 #include <string>
 #include <fstream> 
-// #include "debugging_helpers.cpp"
+#include "debugging_helpers.cpp"
 
 using namespace std;
 
@@ -31,17 +34,19 @@ using namespace std;
 	@return - a new normalized two dimensional grid where the sum of
 		   all probabilities is equal to one.
 */
+vector < vector <float> > zeros(int height, int width);
+
 vector< vector<float> > normalize(vector< vector <float> > grid) {
 
 	vector< vector<float> > newGrid;
 	vector<float> temp_row;
 	float total = 0.0;
 	// todo - your code here
-	for (size_t row = 0; row < grid.size(); row++)
+	for (size_t i = 0; i < grid.size(); i++)
 	{
-		for (size_t cell = 0; cell < grid[0].size(); cell++)
+		for (size_t j = 0; j < grid[0].size(); j++)
 		{
-			total += cell;
+			total += grid[i][j];
 		}
 	}
 	for (size_t i = 0; i < grid.size(); i++)
@@ -53,8 +58,6 @@ vector< vector<float> > normalize(vector< vector <float> > grid) {
 		}
 		newGrid.push_back(temp_row);
 	}
-
-
 	return newGrid;
 }
 
@@ -93,9 +96,39 @@ vector< vector<float> > normalize(vector< vector <float> > grid) {
 */
 vector < vector <float> > blur(vector < vector < float> > grid, float blurring) {
 
-	vector < vector <float> > newGrid;
 
 	// your code here
+	vector<float>::size_type height = grid.size();
+	vector<float>::size_type width = grid[0].size();
+	float center_prob = 1 - blurring;
+	float corner_prob = blurring / 12.0;
+	float adjacent_prob = blurring / 6.0;
+
+	vector< vector<float> > window = { {corner_prob, adjacent_prob, corner_prob},
+	{adjacent_prob, center_prob, adjacent_prob },
+	{corner_prob, adjacent_prob, corner_prob} };
+
+	vector < vector <float> > newGrid;
+	newGrid = zeros((int)height, (int)width);
+
+	float grid_val, mult, new_i, new_j;
+	for (int i = 0; i < height; i++)
+	{
+		for (int j = 0; j < width; j++)
+		{
+			grid_val = grid[i][j];
+			for (int dx = -1; dx < 2; dx++)
+			{
+				for (int dy = -1; dy < 2; dy++)
+				{
+					mult = window[dx + 1][dy + 1];
+					new_i = (i + dy) % height;
+					new_j = (j + dx) % width;
+					newGrid[new_i][new_j] += mult * grid_val;
+				}
+			}
+		}
+	}
 
 	return normalize(newGrid);
 }
@@ -189,7 +222,7 @@ vector < vector <char> > read_map(string file_name) {
 	vector < vector <char> > map;
 	if (infile.is_open()) {
 
-		char color;
+		//char color;
 		vector <char> row;
 
 		string line;
@@ -233,8 +266,12 @@ vector < vector <float> > zeros(int height, int width) {
 	return newGrid;
 }
 
-// int main() {
-// 	vector < vector < char > > map = read_map("maps/m1.txt");
-// 	show_grid(map);
-// 	return 0;
-// }
+//int main() {
+//	vector < vector < char > > map = read_map("D:/Documents/VisualStudioProjects/UdacitySolution/udacity_cpp_histogram_filter_project/m1.txt");
+//	show_grid(map);
+//
+//   return 0;
+//}
+
+
+#endif
