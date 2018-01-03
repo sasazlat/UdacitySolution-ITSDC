@@ -1,16 +1,13 @@
-#ifndef HELPERS_H
-#define HELPERS_H
-
 /**
-	helpers.cpp
+helpers.cpp
 
-	Purpose: helper functions which are useful when
-	implementing a 2-dimensional histogram filter.
+Purpose: helper functions which are useful when
+implementing a 2-dimensional histogram filter.
 
-	This file is incomplete! Your job is to make the
-	normalize and blur functions work. Feel free to
-	look at helper.py for working implementations
-	which are written in python.
+This file is incomplete! Your job is to make the
+normalize and blur functions work. Feel free to
+look at helper.py for working implementations
+which are written in python.
 */
 
 #include <vector>
@@ -18,21 +15,21 @@
 #include <cmath>
 #include <string>
 #include <fstream> 
-#include "debugging_helpers.cpp"
+// #include "debugging_helpers.cpp"
 
 using namespace std;
 
 /**
-	TODO - implement this function
+TODO - implement this function
 
-	Normalizes a grid of numbers.
+Normalizes a grid of numbers.
 
-	@param grid - a two dimensional grid (vector of vectors of floats)
-		   where each entry represents the unnormalized probability
-		   associated with that grid cell.
+@param grid - a two dimensional grid (vector of vectors of floats)
+where each entry represents the unnormalized probability
+associated with that grid cell.
 
-	@return - a new normalized two dimensional grid where the sum of
-		   all probabilities is equal to one.
+@return - a new normalized two dimensional grid where the sum of
+all probabilities is equal to one.
 */
 vector < vector <float> > zeros(int height, int width);
 
@@ -62,56 +59,57 @@ vector< vector<float> > normalize(vector< vector <float> > grid) {
 }
 
 /**
-	TODO - implement this function.
+TODO - implement this function.
 
-	Blurs (and normalizes) a grid of probabilities by spreading
-	probability from each cell over a 3x3 "window" of cells. This
-	function assumes a cyclic world where probability "spills
-	over" from the right edge to the left and bottom to top.
+Blurs (and normalizes) a grid of probabilities by spreading
+probability from each cell over a 3x3 "window" of cells. This
+function assumes a cyclic world where probability "spills
+over" from the right edge to the left and bottom to top.
 
-	EXAMPLE - After blurring (with blurring=0.12) a localized
-	distribution like this:
+EXAMPLE - After blurring (with blurring=0.12) a localized
+distribution like this:
 
-	0.00  0.00  0.00
-	0.00  1.00  0.00
-	0.00  0.00  0.00
+0.00  0.00  0.00
+0.00  1.00  0.00
+0.00  0.00  0.00
 
-	would look like this:
+would look like this:
 
-	0.01  0.02	0.01
-	0.02  0.88	0.02
-	0.01  0.02  0.01
+0.01  0.02	0.01
+0.02  0.88	0.02
+0.01  0.02  0.01
 
-	@param grid - a two dimensional grid (vector of vectors of floats)
-		   where each entry represents the unnormalized probability
-		   associated with that grid cell.
+@param grid - a two dimensional grid (vector of vectors of floats)
+where each entry represents the unnormalized probability
+associated with that grid cell.
 
-	@param blurring - a floating point number between 0.0 and 1.0
-		   which represents how much probability from one cell
-		   "spills over" to it's neighbors. If it's 0.0, then no
-		   blurring occurs.
+@param blurring - a floating point number between 0.0 and 1.0
+which represents how much probability from one cell
+"spills over" to it's neighbors. If it's 0.0, then no
+blurring occurs.
 
-	@return - a new normalized two dimensional grid where probability
-		   has been blurred.
+@return - a new normalized two dimensional grid where probability
+has been blurred.
 */
 vector < vector <float> > blur(vector < vector < float> > grid, float blurring) {
 
 
 	// your code here
-	vector<float>::size_type height = grid.size();
-	vector<float>::size_type width = grid[0].size();
+	int height = static_cast<int>(grid.size());
+	int width = static_cast<int>(grid[0].size());
 	float center_prob = 1 - blurring;
 	float corner_prob = blurring / 12.0;
 	float adjacent_prob = blurring / 6.0;
 
-	vector< vector<float> > window = { {corner_prob, adjacent_prob, corner_prob},
-	{adjacent_prob, center_prob, adjacent_prob },
-	{corner_prob, adjacent_prob, corner_prob} };
+	vector< vector<float> > window = { { corner_prob, adjacent_prob, corner_prob },
+	{ adjacent_prob, center_prob, adjacent_prob },
+	{ corner_prob, adjacent_prob, corner_prob } };
 
 	vector < vector <float> > newGrid;
-	newGrid = zeros((int)height, (int)width);
+	newGrid = zeros(height, width);
 
-	float grid_val, mult, new_i, new_j;
+	float grid_val, mult;
+	int new_i, new_j;
 	for (int i = 0; i < height; i++)
 	{
 		for (int j = 0; j < width; j++)
@@ -122,8 +120,8 @@ vector < vector <float> > blur(vector < vector < float> > grid, float blurring) 
 				for (int dy = -1; dy < 2; dy++)
 				{
 					mult = window[dx + 1][dy + 1];
-					new_i = (i + dy) % height;
-					new_j = (j + dx) % width;
+					new_i = (height + i + dy) % height;
+					new_j = (width + j + dx) % width;
 					newGrid[new_i][new_j] += mult * grid_val;
 				}
 			}
@@ -143,16 +141,16 @@ vector < vector <float> > blur(vector < vector < float> > grid, float blurring) 
 
 
 /**
-	Determines when two grids of floating point numbers
-	are "close enough" that they should be considered
-	equal. Useful for battling "floating point errors".
+Determines when two grids of floating point numbers
+are "close enough" that they should be considered
+equal. Useful for battling "floating point errors".
 
-	@param g1 - a grid of floats
+@param g1 - a grid of floats
 
-	@param g2 - a grid of floats
+@param g2 - a grid of floats
 
-	@return - A boolean (True or False) indicating whether
-	these grids are (True) or are not (False) equal.
+@return - A boolean (True or False) indicating whether
+these grids are (True) or are not (False) equal.
 */
 bool close_enough(vector < vector <float> > g1, vector < vector <float> > g2) {
 	int i, j;
@@ -184,12 +182,12 @@ bool close_enough(float v1, float v2) {
 }
 
 /**
-	Helper function for reading in map data
+Helper function for reading in map data
 
-	@param s - a string representing one line of map data.
+@param s - a string representing one line of map data.
 
-	@return - A row of chars, each of which represents the
-	color of a cell in a grid world.
+@return - A row of chars, each of which represents the
+color of a cell in a grid world.
 */
 vector <char> read_line(string s) {
 	vector <char> row;
@@ -211,11 +209,11 @@ vector <char> read_line(string s) {
 }
 
 /**
-	Helper function for reading in map data
+Helper function for reading in map data
 
-	@param file_name - The filename where the map is stored.
+@param file_name - The filename where the map is stored.
 
-	@return - A grid of chars representing a map.
+@return - A grid of chars representing a map.
 */
 vector < vector <char> > read_map(string file_name) {
 	ifstream infile(file_name);
@@ -236,20 +234,20 @@ vector < vector <char> > read_map(string file_name) {
 }
 
 /**
-	Creates a grid of zeros
+Creates a grid of zeros
 
-	For example:
+For example:
 
-	zeros(2, 3) would return
+zeros(2, 3) would return
 
-	0.0  0.0  0.0
-	0.0  0.0  0.0
+0.0  0.0  0.0
+0.0  0.0  0.0
 
-	@param height - the height of the desired grid
+@param height - the height of the desired grid
 
-	@param width - the width of the desired grid.
+@param width - the width of the desired grid.
 
-	@return a grid of zeros (floats)
+@return a grid of zeros (floats)
 */
 vector < vector <float> > zeros(int height, int width) {
 	int i, j;
@@ -266,12 +264,9 @@ vector < vector <float> > zeros(int height, int width) {
 	return newGrid;
 }
 
-//int main() {
-//	vector < vector < char > > map = read_map("D:/Documents/VisualStudioProjects/UdacitySolution/udacity_cpp_histogram_filter_project/m1.txt");
-//	show_grid(map);
-//
+// int main() {
+// 	vector < vector < char > > map = read_map("maps/m1.txt");
+// 	show_grid(map);
+
 //   return 0;
-//}
-
-
-#endif
+// }
