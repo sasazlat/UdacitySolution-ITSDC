@@ -79,7 +79,6 @@ Do that by first compiling this file and then
 running the output.
 */
 //int main() {
-
 //	vector < vector <char> > map;
 //	vector <char> mapRow;
 //	int i, j, randInt;
