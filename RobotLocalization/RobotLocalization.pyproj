@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>d6ca49de-d7aa-472f-86d4-91e2098ee80b</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>zavrsni\writeup.py</StartupFile>
+    <StartupFile>zavrsni\helpers.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>

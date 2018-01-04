@@ -1,3 +1,5 @@
+#ifndef TESTS_H
+#define TESTS_H
 #include <iostream>
 #include "simulate.cpp"
 
@@ -101,7 +103,7 @@ bool test_helpers() {
 
 bool test_initialize() {
 	vector < vector <char> > map;
-	map = read_map("maps/m1.txt");
+	map = read_map("D:\\Documents\\VisualStudioProjects\\UdacitySolution\\udacity_cpp_histogram_filter_project\\m1.txt");
 	int h = map.size();
 
 	if (h < 1) {
@@ -194,7 +196,7 @@ bool test_sense() {
 
 	char color = 'r';
 	vector < vector <char> > map;
-	map = read_map("maps/half_red.txt");
+	map = read_map("D:\\Documents\\VisualStudioProjects\\UdacitySolution\\udacity_cpp_histogram_filter_project\\half_red.txt");
 	float p_hit, p_miss;
 	p_hit = 2.0;
 	p_miss = 1.0;
@@ -283,3 +285,5 @@ int main() {
 	cout << endl;
 	return 0;
 }
+
+#endif
