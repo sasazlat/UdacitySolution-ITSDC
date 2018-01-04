@@ -8,9 +8,6 @@
 	This file is incomplete! Your job is to make
 	this code work.
 */
-#ifndef SIMULATION_H
-#define SIMULATION_H
-
 #include "localizer.cpp"
 #include <algorithm>
 #include "helpers.cpp"
@@ -114,6 +111,3 @@ running the output.
  //	cout << "x, y = (" << simulation.true_pose[0] << ", " << simulation.true_pose[1] << ")" << endl;
  //	return 0;
  //}
-
-
-#endif

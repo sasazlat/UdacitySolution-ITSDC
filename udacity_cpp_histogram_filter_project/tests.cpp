@@ -1,5 +1,3 @@
-#ifndef TESTS_H
-#define TESTS_H
 #include <iostream>
 #include "simulate.cpp"
 
@@ -285,5 +283,3 @@ int main() {
 	cout << endl;
 	return 0;
 }
-
-#endif
