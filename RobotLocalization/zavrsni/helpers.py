@@ -30,7 +30,9 @@ def blur(grid, blurring):
     window = [[corner_prob,  adjacent_prob,  corner_prob],
             [adjacent_prob, center_prob,  adjacent_prob],
             [corner_prob,  adjacent_prob,  corner_prob]]
+
     new = [[0.0 for i in range(width)] for j in range(height)]
+
     for i in range(height):
         for j in range(width):
             grid_val = grid[i][j]
@@ -82,3 +84,11 @@ def close_enough(g1, g2):
                 print(v1, v2)
                 return False
     return True
+
+#grid = [[0.00, 0.00, 0.00, 0.00,0.00,0.00],
+#    [0.00, 0.00, 0.00,0.00,0.00,0.00],
+#    [0.00, 0.00, 0.1,0.88,0.02,0.00],
+#    [0.00, 0.00, 0.00,0.00,0.00,0.00],
+#    [0.00, 0.00, 0.00,0.00,0.00,0.00]]
+
+#blur(grid, 0.18)

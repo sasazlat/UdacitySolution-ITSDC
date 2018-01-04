@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>566f8074-1581-487d-9e6a-371d8d88428b</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>why_numpy.py</StartupFile>
+    <StartupFile>module1.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,6 +22,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="module1.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="pattern_matching.py" />
     <Compile Include="why_numpy.py">
       <SubType>Code</SubType>
