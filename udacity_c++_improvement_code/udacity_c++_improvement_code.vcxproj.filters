@@ -15,25 +15,11 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DeadCode\main.cpp">
+    <ClCompile Include="IfStatements\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DeadCode\matrix_addition.cpp">
+    <ClCompile Include="IfStatements\solution.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DeadCode\matrix_addition_improved.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DeadCode\solution.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="DeadCode\matrix_addition.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DeadCode\matrix_addition_improved.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

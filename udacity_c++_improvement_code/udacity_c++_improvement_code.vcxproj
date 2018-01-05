@@ -18,6 +18,10 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="IfStatements\main.cpp" />
+    <ClCompile Include="IfStatements\solution.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{4BB8ADF4-8A12-4A76-A230-8448F024AFC8}</ProjectGuid>
@@ -114,16 +118,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="DeadCode\main.cpp" />
-    <ClCompile Include="DeadCode\matrix_addition.cpp" />
-    <ClCompile Include="DeadCode\matrix_addition_improved.cpp" />
-    <ClCompile Include="DeadCode\solution.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="DeadCode\matrix_addition.h" />
-    <ClInclude Include="DeadCode\matrix_addition_improved.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

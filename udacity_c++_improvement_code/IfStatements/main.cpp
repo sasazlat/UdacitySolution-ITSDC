@@ -33,7 +33,10 @@ int main(int argc, const char * argv[]) {
 
   	// optimize the if statements below
     for (int i = 0; i < 100000; i++) {
-        if (i > 0 && i < 5) {
+        if (i > 37) {
+            cout << "high \n";
+        }
+        else if (i > 0 && i < 5) {
             cout <<  "low \n";
         }
         else if (i <= 10) {
@@ -45,9 +48,6 @@ int main(int argc, const char * argv[]) {
         else if (i <= 37) {
             
             cout << "medium-high \n";
-        }
-        if (i > 37) {
-            cout << "high \n";
         }
     }
     duration_two = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
