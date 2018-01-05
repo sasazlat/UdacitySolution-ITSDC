@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "udacity_cpp_histogram_filte
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "StateAndObjects", "StateAndObjects\StateAndObjects.pyproj", "{F33F9628-66C6-4E4A-AA76-3D0899925218}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "udacity_c++_improvement_code", "udacity_c++_improvement_code\udacity_c++_improvement_code.vcxproj", "{4BB8ADF4-8A12-4A76-A230-8448F024AFC8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,16 @@ Global
 		{F33F9628-66C6-4E4A-AA76-3D0899925218}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F33F9628-66C6-4E4A-AA76-3D0899925218}.Release|x64.ActiveCfg = Release|Any CPU
 		{F33F9628-66C6-4E4A-AA76-3D0899925218}.Release|x86.ActiveCfg = Release|Any CPU
+		{4BB8ADF4-8A12-4A76-A230-8448F024AFC8}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{4BB8ADF4-8A12-4A76-A230-8448F024AFC8}.Debug|x64.ActiveCfg = Debug|x64
+		{4BB8ADF4-8A12-4A76-A230-8448F024AFC8}.Debug|x64.Build.0 = Debug|x64
+		{4BB8ADF4-8A12-4A76-A230-8448F024AFC8}.Debug|x86.ActiveCfg = Debug|Win32
+		{4BB8ADF4-8A12-4A76-A230-8448F024AFC8}.Debug|x86.Build.0 = Debug|Win32
+		{4BB8ADF4-8A12-4A76-A230-8448F024AFC8}.Release|Any CPU.ActiveCfg = Release|Win32
+		{4BB8ADF4-8A12-4A76-A230-8448F024AFC8}.Release|x64.ActiveCfg = Release|x64
+		{4BB8ADF4-8A12-4A76-A230-8448F024AFC8}.Release|x64.Build.0 = Release|x64
+		{4BB8ADF4-8A12-4A76-A230-8448F024AFC8}.Release|x86.ActiveCfg = Release|Win32
+		{4BB8ADF4-8A12-4A76-A230-8448F024AFC8}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
