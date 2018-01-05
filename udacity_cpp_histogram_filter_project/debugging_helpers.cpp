@@ -1,8 +1,8 @@
 /**
-	debugging_helpers.cpp
+debugging_helpers.cpp
 
-	Purpose: helper functions for debugging when working
-	with grids of floats and chars.
+Purpose: helper functions for debugging when working
+with grids of floats and chars.
 */
 
 #include <vector>
@@ -10,11 +10,11 @@
 using namespace std;
 
 /**
-	Displays a grid of beliefs. Does not return.
+Displays a grid of beliefs. Does not return.
 
-	@param grid - a two dimensional grid (vector of
-		   vectors of floats) which will usually
-		   represent a robot's beliefs.
+@param grid - a two dimensional grid (vector of
+vectors of floats) which will usually
+represent a robot's beliefs.
 */
 void show_grid(vector < vector <float> > grid) {
 	int i, j;
@@ -33,7 +33,7 @@ void show_grid(vector < vector <float> > grid) {
 }
 
 /**
-	Displays a grid map of the world
+Displays a grid map of the world
 */
 void show_grid(vector < vector <char> > map) {
 	int i, j;
@@ -50,4 +50,3 @@ void show_grid(vector < vector <char> > map) {
 		cout << endl;
 
 	}
-}
