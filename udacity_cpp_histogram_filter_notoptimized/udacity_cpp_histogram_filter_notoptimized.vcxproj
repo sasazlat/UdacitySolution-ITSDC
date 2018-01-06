@@ -18,28 +18,10 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="VectorStorage\initializer.cpp" />
-    <ClCompile Include="VectorStorage\main.cpp" />
-    <ClCompile Include="VectorStorage\print.cpp" />
-    <ClCompile Include="VectorStorage\reserved.cpp" />
-    <ClCompile Include="VectorStorage\solution1.cpp" />
-    <ClCompile Include="VectorStorage\solution2.cpp" />
-    <ClCompile Include="VectorStorage\unreserved.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="VectorStorage\initializer.hpp" />
-    <ClInclude Include="VectorStorage\print.hpp" />
-    <ClInclude Include="VectorStorage\reserved.hpp" />
-    <ClInclude Include="VectorStorage\unreserved.hpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="VectorStorage\instructions.md" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{4BB8ADF4-8A12-4A76-A230-8448F024AFC8}</ProjectGuid>
-    <RootNamespace>udacitycimprovementcode</RootNamespace>
+    <ProjectGuid>{CDB8A655-C9D8-4BDA-B638-704FE1D126A6}</ProjectGuid>
+    <RootNamespace>udacitycpphistogramfilternotoptimized</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -132,6 +114,25 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="andy_histogram_filter\blur.cpp" />
+    <ClCompile Include="andy_histogram_filter\initialize_beliefs.cpp" />
+    <ClCompile Include="andy_histogram_filter\main.cpp" />
+    <ClCompile Include="andy_histogram_filter\move.cpp" />
+    <ClCompile Include="andy_histogram_filter\normalize.cpp" />
+    <ClCompile Include="andy_histogram_filter\print.cpp" />
+    <ClCompile Include="andy_histogram_filter\sense.cpp" />
+    <ClCompile Include="andy_histogram_filter\zeros.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="andy_histogram_filter\headers\blur.h" />
+    <ClInclude Include="andy_histogram_filter\headers\initialize_beliefs.h" />
+    <ClInclude Include="andy_histogram_filter\headers\move.h" />
+    <ClInclude Include="andy_histogram_filter\headers\normalize.h" />
+    <ClInclude Include="andy_histogram_filter\headers\print.h" />
+    <ClInclude Include="andy_histogram_filter\headers\sense.h" />
+    <ClInclude Include="andy_histogram_filter\headers\zeros.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

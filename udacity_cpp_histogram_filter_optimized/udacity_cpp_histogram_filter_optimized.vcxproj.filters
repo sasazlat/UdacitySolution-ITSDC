@@ -15,44 +15,59 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="VectorStorage\initializer.cpp">
+    <ClCompile Include="optimized_code\blur.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="VectorStorage\main.cpp">
+    <ClCompile Include="optimized_code\initialize_beliefs.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="VectorStorage\print.cpp">
+    <ClCompile Include="optimized_code\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="VectorStorage\reserved.cpp">
+    <ClCompile Include="optimized_code\move.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="VectorStorage\solution1.cpp">
+    <ClCompile Include="optimized_code\normalize.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="VectorStorage\solution2.cpp">
+    <ClCompile Include="optimized_code\print.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="VectorStorage\unreserved.cpp">
+    <ClCompile Include="optimized_code\sense.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="optimized_code\zeros.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="VectorStorage\initializer.hpp">
+    <ClInclude Include="optimized_code\headers\blur.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="VectorStorage\print.hpp">
+    <ClInclude Include="optimized_code\headers\initialize_beliefs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="VectorStorage\reserved.hpp">
+    <ClInclude Include="optimized_code\headers\move.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="VectorStorage\unreserved.hpp">
+    <ClInclude Include="optimized_code\headers\normalize.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="optimized_code\headers\print.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="optimized_code\headers\sense.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="optimized_code\headers\zeros.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="VectorStorage\instructions.md">
+    <None Include="hints.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="instructions.md">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

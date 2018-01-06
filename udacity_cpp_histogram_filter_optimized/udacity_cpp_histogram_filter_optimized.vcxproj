@@ -18,28 +18,10 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="VectorStorage\initializer.cpp" />
-    <ClCompile Include="VectorStorage\main.cpp" />
-    <ClCompile Include="VectorStorage\print.cpp" />
-    <ClCompile Include="VectorStorage\reserved.cpp" />
-    <ClCompile Include="VectorStorage\solution1.cpp" />
-    <ClCompile Include="VectorStorage\solution2.cpp" />
-    <ClCompile Include="VectorStorage\unreserved.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="VectorStorage\initializer.hpp" />
-    <ClInclude Include="VectorStorage\print.hpp" />
-    <ClInclude Include="VectorStorage\reserved.hpp" />
-    <ClInclude Include="VectorStorage\unreserved.hpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="VectorStorage\instructions.md" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{4BB8ADF4-8A12-4A76-A230-8448F024AFC8}</ProjectGuid>
-    <RootNamespace>udacitycimprovementcode</RootNamespace>
+    <ProjectGuid>{6A08F9F1-F7AF-4649-AFA1-3578C4A106D3}</ProjectGuid>
+    <RootNamespace>udacitycpphistogramfilteroptimized</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -132,6 +114,29 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="optimized_code\blur.cpp" />
+    <ClCompile Include="optimized_code\initialize_beliefs.cpp" />
+    <ClCompile Include="optimized_code\main.cpp" />
+    <ClCompile Include="optimized_code\move.cpp" />
+    <ClCompile Include="optimized_code\normalize.cpp" />
+    <ClCompile Include="optimized_code\print.cpp" />
+    <ClCompile Include="optimized_code\sense.cpp" />
+    <ClCompile Include="optimized_code\zeros.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="optimized_code\headers\blur.h" />
+    <ClInclude Include="optimized_code\headers\initialize_beliefs.h" />
+    <ClInclude Include="optimized_code\headers\move.h" />
+    <ClInclude Include="optimized_code\headers\normalize.h" />
+    <ClInclude Include="optimized_code\headers\print.h" />
+    <ClInclude Include="optimized_code\headers\sense.h" />
+    <ClInclude Include="optimized_code\headers\zeros.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hints.md" />
+    <None Include="instructions.md" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

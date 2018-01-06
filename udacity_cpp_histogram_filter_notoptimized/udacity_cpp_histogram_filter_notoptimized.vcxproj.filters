@@ -15,45 +15,52 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="VectorStorage\initializer.cpp">
+    <ClCompile Include="andy_histogram_filter\blur.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="VectorStorage\main.cpp">
+    <ClCompile Include="andy_histogram_filter\initialize_beliefs.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="VectorStorage\print.cpp">
+    <ClCompile Include="andy_histogram_filter\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="VectorStorage\reserved.cpp">
+    <ClCompile Include="andy_histogram_filter\move.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="VectorStorage\solution1.cpp">
+    <ClCompile Include="andy_histogram_filter\normalize.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="VectorStorage\solution2.cpp">
+    <ClCompile Include="andy_histogram_filter\print.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="VectorStorage\unreserved.cpp">
+    <ClCompile Include="andy_histogram_filter\sense.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="andy_histogram_filter\zeros.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="VectorStorage\initializer.hpp">
+    <ClInclude Include="andy_histogram_filter\headers\blur.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="VectorStorage\print.hpp">
+    <ClInclude Include="andy_histogram_filter\headers\initialize_beliefs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="VectorStorage\reserved.hpp">
+    <ClInclude Include="andy_histogram_filter\headers\move.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="VectorStorage\unreserved.hpp">
+    <ClInclude Include="andy_histogram_filter\headers\normalize.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="VectorStorage\instructions.md">
-      <Filter>Resource Files</Filter>
-    </None>
+    <ClInclude Include="andy_histogram_filter\headers\print.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="andy_histogram_filter\headers\sense.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="andy_histogram_filter\headers\zeros.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
