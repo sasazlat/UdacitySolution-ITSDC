@@ -50,4 +50,3 @@ void show_grid(vector < vector <char> > map) {
 		cout << endl;
 
 	}
-}
