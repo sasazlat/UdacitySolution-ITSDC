@@ -17,15 +17,10 @@ vector < vector <float> > blur(vector < vector < float> > &grid, float blurring)
 	// instead of calculating these vectors with for loops 
 	// and push back
 	vector < vector <float> > newGrid;
-	vector <float> row;
-	vector <float> newRow;
 
-	int height;
-	int width;
+	const int height = grid.size();
+	const int width = grid[0].size();
 	static float center, corner, adjacent;
-
-	height = grid.size();
-	width = grid[0].size();
 
 	center = 1.0 - blurring;
 	corner = blurring / 12.0;
@@ -37,36 +32,27 @@ vector < vector <float> > blur(vector < vector < float> > &grid, float blurring)
 												{corner, adjacent, corner}
 	};
 
-	int i, j;
-	float val;
+	//int i, j;
+	//float *val;
 
-	static vector <int> DX = { -1, 0, 1 };
-	static vector <int> DY = { -1, 0, 1 };
+	static const vector <int> DX = { -1, 0, 1 };
+	static const vector <int> DY = { -1, 0, 1 };
 
-	int dx;
-	int dy;
-	int ii;
-	int jj;
-	int new_i;
-	int new_j;
+
 	float multiplier;
-	float newVal;
 
 	// OPTIMIZATION: Use your improved zeros function
 	newGrid = zeros(height, width);
 
-	for (i = 0; i < height; i++) {
-		for (j = 0; j < width; j++) {
-			val = grid[i][j];
-			newVal = val;
-			for (ii = 0; ii < 3; ii++) {
-				dy = DY[ii];
-				for (jj = 0; jj < 3; jj++) {
-					dx = DX[jj];
-					new_i = (i + dy + height) % height;
-					new_j = (j + dx + width) % width;
+	for (int i = 0; i < height; i++) {
+		for (int j = 0; j < width; j++) {
+			float *val = &grid[i][j];
+			for (int ii = 0; ii < 3; ii++) {
+				for (int jj = 0; jj < 3; jj++) {
+					int new_i = (i + DY[ii] + height) % height;
+					int new_j = (j + DX[jj] + width) % width;
 					multiplier = window[ii][jj];
-					newGrid[new_i][new_j] += newVal * multiplier;
+					newGrid[new_i][new_j] += *val * multiplier;
 				}
 			}
 		}
