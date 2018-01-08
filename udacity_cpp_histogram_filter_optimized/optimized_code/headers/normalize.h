@@ -3,6 +3,6 @@
 
 #include <vector>
 
-std::vector < std::vector <float> > normalize(std::vector < std::vector <float> > &grid);
+void normalize(std::vector < std::vector <float> > &grid);
 
 #endif /* NORMALIZE.H */

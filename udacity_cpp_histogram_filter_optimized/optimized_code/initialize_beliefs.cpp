@@ -13,7 +13,7 @@ vector< vector <float> > initialize_beliefs(vector< vector <char> > &grid) {
 	static float prob_per_cell = 1.0 / ((float)height * width);
 
 	// OPTIMIZATION: Is there a way to get the same results 	// without nested for loops?
-	vector< vector <float> > newGrid(height, vector<float>(width, prob_per_cell));
+	vector< vector <float> > newGrid(grid.size(), vector<float>(grid[0].size(), 1.0 / ((float)height * width)));
 	
 	return newGrid;
 }

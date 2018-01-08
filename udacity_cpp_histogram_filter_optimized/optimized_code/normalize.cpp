@@ -2,7 +2,7 @@
 using namespace std;
 
 // OPTIMIZATION: Pass variable by reference
-vector< vector<float> > normalize(vector< vector <float> > &grid) {
+void normalize(vector< vector <float> > &grid) {
 
 	// OPTIMIZATION: Avoid declaring and defining 				
 	// intermediate variables that are not needed.
@@ -21,5 +21,4 @@ vector< vector<float> > normalize(vector< vector <float> > &grid) {
 			grid[i][j] = grid[i][j] / total;
 		}
 	}
-	return grid;
 }

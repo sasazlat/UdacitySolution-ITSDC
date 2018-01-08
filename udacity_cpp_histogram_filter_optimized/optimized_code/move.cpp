@@ -4,7 +4,7 @@
 using namespace std;
 
 // OPTIMIZATION: Pass large variable by reference
-vector< vector <float> > move(int dy, int dx, 
+void move(int dy, int dx, 
 	vector < vector <float> > &beliefs) 
 {
 	const int height = beliefs.size();
@@ -21,10 +21,8 @@ vector< vector <float> > move(int dy, int dx,
   	for (int i=0; i<height; i++) {
 		for (int j=0; j<width; j++) {
 			int new_i = (i + dy + height) % height;
-			int new_j = (j + dx + width)  % width;
-			
+			int new_j = (j + dx + width)  % width;			
 			beliefs[new_i][new_j] = beliefs[i][j];
 		}
 	}
-	return beliefs;
 }

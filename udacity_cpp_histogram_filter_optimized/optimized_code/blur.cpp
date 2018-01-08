@@ -1,10 +1,10 @@
-#include "headers\blur.h"
-#include "headers\zeros.h"
+#include "headers/blur.h"
+#include "headers/zeros.h"
 
 using namespace std;
 
 // OPTIMIZATION: Pass large variable by reference
-vector < vector <float> > blur(vector < vector < float> > &grid, float blurring) {
+void blur(vector < vector < float> > &grid, float blurring) {
 
 	// OPTIMIZATION: window, DX and  DY variables have the 
 	// same value each time the function is run.
@@ -16,7 +16,7 @@ vector < vector <float> > blur(vector < vector < float> > &grid, float blurring)
 	// bracket syntax: vector<int> foo = {1, 2, 3, 4} 
 	// instead of calculating these vectors with for loops 
 	// and push back
-	vector < vector <float> > newGrid;
+	//vector < vector <float> > newGrid;
 
 	const int height = grid.size();
 	const int width = grid[0].size();
@@ -27,36 +27,30 @@ vector < vector <float> > blur(vector < vector < float> > &grid, float blurring)
 	adjacent = blurring / 6.0;
 
 
-	static vector < vector <float> > window = { {corner, adjacent, corner},
+	static const float window[3][3] = { {corner, adjacent, corner},
 												{adjacent, center, adjacent},
 												{corner, adjacent, corner}
 	};
 
-	//int i, j;
-	//float *val;
-
-	static const vector <int> DX = { -1, 0, 1 };
-	static const vector <int> DY = { -1, 0, 1 };
+	static const vector <int> D = { -1, 0, 1 };	
 
 
-	float multiplier;
+	//float multiplier;
 
 	// OPTIMIZATION: Use your improved zeros function
-	newGrid = zeros(height, width);
+	//newGrid = zeros(height, width);
 
 	for (int i = 0; i < height; i++) {
 		for (int j = 0; j < width; j++) {
-			float *val = &grid[i][j];
+			//float *val = &grid[i][j];
 			for (int ii = 0; ii < 3; ii++) {
 				for (int jj = 0; jj < 3; jj++) {
-					int new_i = (i + DY[ii] + height) % height;
-					int new_j = (j + DX[jj] + width) % width;
-					multiplier = window[ii][jj];
-					newGrid[new_i][new_j] += *val * multiplier;
+					int new_i = (i + D[ii] + height) % height;
+					int new_j = (j + D[jj] + width) % width;
+					//multiplier = window[ii][jj];
+					grid[new_i][new_j] += grid[i][j] * window[ii][jj];
 				}
 			}
 		}
 	}
-
-	return newGrid;
 }

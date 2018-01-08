@@ -3,7 +3,7 @@
 using namespace std;
 
 // OPTIMIZATION: Pass larger variables by reference
-vector< vector <float> > sense(char color, vector< vector <char> > &grid, vector< vector <float> > &beliefs, float p_hit, float p_miss)
+void sense(char color, vector< vector <char> > &grid, vector< vector <float> > &beliefs, float p_hit, float p_miss)
 {
 	// OPTIMIZATION: Is the newGrid variable necessary?
 	// Could the beliefs input variable be updated directly?
@@ -18,5 +18,4 @@ vector< vector <float> > sense(char color, vector< vector <char> > &grid, vector
 			beliefs[i][j] = ((grid[i][j] == color) ? p_hit : p_miss) * beliefs[i][j];
 		}
 	}
-	return beliefs;
 }
