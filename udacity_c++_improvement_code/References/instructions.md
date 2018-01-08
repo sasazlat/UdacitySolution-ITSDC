@@ -1,8 +1,10 @@
 # References Exercise
 
-The code in this exercise is the same as the "Dead Code" exercise. A matrix addition function has already beeen written for you and placed in both the matrix_addition.cpp and matrix_addition_improved.cpp file.
+The code in this exercise is the same as the "Dead Code" exercise. A matrix addition function has 
+already beeen written for you and placed in both the matrix_addition.cpp and matrix_addition_improved.cpp file.
 
-Your task is to modify the code in matrix_addition_improved.cpp, passing the variables by reference. You'll also have to modify the function definition in matrix_addition_improved.hpp. 
+Your task is to modify the code in matrix_addition_improved.cpp, passing the variables by reference. 
+You'll also have to modify the function definition in matrix_addition_improved.hpp. 
 
 This exercise is relatively simple. Your only task is to add the ampersand symbols in the correct place.
 
@@ -14,7 +16,9 @@ cd /home/workspace/References
 g++ -std=c++11 main.cpp matrix_addition.cpp matrix_addition_improved.cpp
 ./a.out
 
-3. Modify the code in matrix_addition_improved.cpp and matrix_addition_improved.hpp. Add the & symbol where necessary to pass the variables in my reference. Remember, you must change the function declaration in .hpp if you change the function inputs in the .cpp file.
+3. Modify the code in matrix_addition_improved.cpp and matrix_addition_improved.hpp. Add the & symbol where 
+necessary to pass the variables in my reference. Remember, you must change the function declaration in .hpp 
+if you change the function inputs in the .cpp file.
 
 4. Run the code again using the following code in the terminal (this assume you are already inside the References folder in your terminal window)
 g++ -std=c++11 main.cpp matrix_addition.cpp matrix_addition_improved.cpp
