@@ -25,6 +25,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "udacity_cpp_histogram_filte
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "udacity_cpp_histogram_filter_optimized_solutiion", "udacity_cpp_histogram_filter_optimized_solutiion\udacity_cpp_histogram_filter_optimized_solutiion.vcxproj", "{AE17704B-1D8F-4CA1-8017-C223E720D314}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "days_between_dates", "days_between_dates\days_between_dates.pyproj", "{6786FE1B-3D4A-453D-8B52-CEB3F21EC0C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -125,6 +127,12 @@ Global
 		{AE17704B-1D8F-4CA1-8017-C223E720D314}.Release|x64.Build.0 = Release|x64
 		{AE17704B-1D8F-4CA1-8017-C223E720D314}.Release|x86.ActiveCfg = Release|Win32
 		{AE17704B-1D8F-4CA1-8017-C223E720D314}.Release|x86.Build.0 = Release|Win32
+		{6786FE1B-3D4A-453D-8B52-CEB3F21EC0C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6786FE1B-3D4A-453D-8B52-CEB3F21EC0C7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6786FE1B-3D4A-453D-8B52-CEB3F21EC0C7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6786FE1B-3D4A-453D-8B52-CEB3F21EC0C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6786FE1B-3D4A-453D-8B52-CEB3F21EC0C7}.Release|x64.ActiveCfg = Release|Any CPU
+		{6786FE1B-3D4A-453D-8B52-CEB3F21EC0C7}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
