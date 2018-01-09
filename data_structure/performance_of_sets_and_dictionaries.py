@@ -184,6 +184,7 @@ plt.legend(["List", "Set", "Dictionary"])
 plt.title("Comparing Membership Testing Times")
 plt.show()
 
+# In[ ]:
 
-# As you can see, the performance of sets and dictionaries does not depend on the size of the set / dictionary and membership tests are consistently **fast**. Fast is good.
-
+# As you can see, the performance of sets and dictionaries does not depend on the size of the set / 
+# dictionary and membership tests are consistently **fast**. Fast is good.

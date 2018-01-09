@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>49191257-e2c3-4734-bcf7-e4aba4dc2c06</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>performance_of_sets_and_dictionaries.py</StartupFile>
+    <StartupFile>other_data_structures.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -31,6 +31,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="lists_timing_and_performance.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="other_data_structures.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="performance_of_sets_and_dictionaries.py">
