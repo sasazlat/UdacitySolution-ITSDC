@@ -3,7 +3,7 @@
 using namespace std;
 
 // OPTIMIZATION: Pass the matrixa and matrixb variables by reference
-vector < vector <int> > matrix_addition_improved(vector < vector <int> > matrixa, vector < vector <int> > matrixb) {
+vector < vector <int> >* matrix_addition_improved(vector < vector <int> > &matrixa, vector < vector <int> > &matrixb) {
     
     vector<int>::size_type rows_a = matrixa.size();
     vector<int>::size_type rows_b = matrixb.size();
@@ -16,13 +16,12 @@ vector < vector <int> > matrix_addition_improved(vector < vector <int> > matrixa
         
         for (unsigned int i = 0; i < rows_a; i++) {
             for (unsigned int j = 0; j < cols_a; j++) {
-                matrix_sum[i][j] = matrixa[i][j] + matrixb[i][j];
+                matrixa[i][j] = matrixa[i][j] + matrixb[i][j];
             }
         }
-        return matrix_sum;
     }
     
-    return matrix_sum;
+    return &matrixa;
     
 }
 

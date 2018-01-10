@@ -24,7 +24,7 @@ int main(int argc, const char * argv[]) {
     };
     
     vector< vector<int> > matrixsum;
-    vector< vector<int> > matrixsum_improved;
+    vector< vector<int> >* matrixsum_improved;
     int iterations = 1000000;
     
     std::clock_t start;

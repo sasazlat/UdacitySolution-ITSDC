@@ -19,8 +19,22 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="IfStatements\main.cpp" />
-    <ClCompile Include="IfStatements\solution.cpp" />
+    <ClCompile Include="VectorStorage\initializer.cpp" />
+    <ClCompile Include="VectorStorage\main.cpp" />
+    <ClCompile Include="VectorStorage\print.cpp" />
+    <ClCompile Include="VectorStorage\reserved.cpp" />
+    <ClCompile Include="VectorStorage\solution1.cpp" />
+    <ClCompile Include="VectorStorage\solution2.cpp" />
+    <ClCompile Include="VectorStorage\unreserved.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="VectorStorage\initializer.hpp" />
+    <ClInclude Include="VectorStorage\print.hpp" />
+    <ClInclude Include="VectorStorage\reserved.hpp" />
+    <ClInclude Include="VectorStorage\unreserved.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="VectorStorage\instructions.md" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
