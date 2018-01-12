@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>49191257-e2c3-4734-bcf7-e4aba4dc2c06</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Intro_to_Sets.py</StartupFile>
+    <StartupFile>project\project_notebook.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -30,10 +30,30 @@
     <Compile Include="Intro_to_Sets.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="lists_timing_and_performance.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="other_data_structures.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="performance_of_sets_and_dictionaries.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="project\helpers.py" />
+    <Compile Include="project\project_notebook.py" />
+    <Compile Include="project\student_code.py" />
+    <Compile Include="project\test.py" />
     <Compile Include="sample_data.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="strings_and_lists.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="project\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="project\map_10.json" />
+    <Content Include="project\notebook.tex" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
