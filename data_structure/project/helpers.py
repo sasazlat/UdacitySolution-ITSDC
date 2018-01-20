@@ -23,7 +23,7 @@ def load_map(name):
 
 def show_map(M, start=None, goal=None, path=None):
     G = M._graph
-    pos = nx.get_node_attributes(G, 'pos')
+    pos = nx.get_node_attributes(G, 'po s')
     edge_trace = Scatter(
     x=[],
     y=[],

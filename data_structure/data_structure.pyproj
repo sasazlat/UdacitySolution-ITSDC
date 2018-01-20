@@ -40,6 +40,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="project\helpers.py" />
+    <Compile Include="project\implementation.py" />
+    <Compile Include="project\isdc_slack.py" />
     <Compile Include="project\project_notebook.py" />
     <Compile Include="project\student_code.py" />
     <Compile Include="project\test.py" />
