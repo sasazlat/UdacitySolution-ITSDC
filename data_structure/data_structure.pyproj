@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>49191257-e2c3-4734-bcf7-e4aba4dc2c06</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>project\project_notebook.py</StartupFile>
+    <StartupFile>project\student_code.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
