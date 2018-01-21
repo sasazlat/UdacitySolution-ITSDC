@@ -1,9 +1,5 @@
-import networkx as nx
-import math
-from collections import namedtuple as nt
 import heapq
-from queue import PriorityQueue
-
+import math
 
 def heuristic_cost_estimate(M, s, g):
     Point = nt('Point' , ['x','y'])
@@ -29,34 +25,7 @@ def h_to_goal(M, goal):
     return h
 
 
-class Node(object):
-    def __init__(self, state=None, action=None, total_cost=0.0, parent=None):
-        self.state = state
-        self.action = action
-        self.total_cost = total_cost
-        self.parent = parent
 
-    def h_dist(M, goal):
-        if self.state:
-            x1,y1 = M.intersections[self.state]
-            x2,y2 = M.intersections[goal]
-            return math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
-        return 
-
-    def get_state(self):
-        return self.state
-
-    def get_parent(self):
-        return self.parent
-
-    def set_state(self,new_state):
-        self.state = new_state
-
-    def set_parent(self,other):
-        if self.total_cost > other.total_cost:
-            self.parent = other.parent
-
-import heapq
 class PrioritySet(object):
     def __init__(self):
         self.heap = []
@@ -71,9 +40,6 @@ class PrioritySet(object):
         priority, state = heapq.heappop(self.heap)
         self.priority_set.remove(state)
         return state
-
-    def add_and_get(self, state, priority):
-        return heapq.heappushpop(self.heap, (priority, state))
 
 
 
@@ -183,14 +149,19 @@ map_40_roads = [[36, 34, 31, 28, 17],
  [23, 29, 32],
  [2, 4, 7, 22, 28, 36]]
 
-def shortest_path(M,start,goal):
+def shortest_path(start,goal):
     
+    #elements that are expanded
+    #The set of nodes already evaluated
+    explored = set()
+
+
     #priority queue for storing our frontier elements
+    #The set of currently discovered nodes that are not evaluated yet.
+    #Initially, only the start node is known.
     frontier = PrioritySet()
     frontier.add(start, 0)
     
-    #elements that are expanded
-    explored = set()
 
     #For each node, which node it can most efficiently be reached from.
     #If a node can be reached from many nodes, cameFrom will eventually contain
@@ -209,12 +180,38 @@ def shortest_path(M,start,goal):
     f_score = {}
 
     #For the first node, that value is completely heuristic.
-    f_score[start] = h_dist(M,start, goal)
+    f_score[start] = h_dist(map_40_intersections,start,goal)
 
 
-    print(f_score, frontier.heap) 
+    while len(frontier.priority_set) != 0:
+        current = frontier.get()
+        if current is goal:
+            return reconstruct_path(came_from, current)
+        explored.add(current)
+        for neghbour in map_40_roads[current]:
+            if neghbour in explored:
+                continue
+            #The distance from start to a neighbor
+            #the "dist_between" function may vary as per the solution
+            #requirements.
+            tentative_gScore = g_score[current] + h_dist(map_40_intersections, current,neghbour)
+            came_from[neghbour] = current
+            g_score[neghbour] = tentative_gScore
+            f_score[neghbour] = g_score[neghbour] + h_dist(map_40_intersections,neghbour,goal)
+            frontier.add(neghbour,f_score[neghbour])
+    return ''
 
+def reconstruct_path(cameFrom, current):
+    total_path = [current]
+    while current in cameFrom.keys():
+        current = cameFrom[current]
+        total_path.append(current)
+    total_path.reverse()
+    return total_path
 
-h_dict = h_to_goal(map_40_intersections, 25)
+print("shortest path called")
+total_path1 = shortest_path(5, 34)
+total_path2 = shortest_path(5, 5)
+total_path3 = shortest_path(8, 24)
 
-shortest_path(map_40_intersections, 5, 34)
+print (total_path1, total_path2, total_path3)

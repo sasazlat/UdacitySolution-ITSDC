@@ -1,5 +1,3 @@
-from math import *
-import pdb
 import heapq
 import math
 
@@ -117,23 +115,18 @@ class PrioritySet(object):
         self.priority_set.remove(state)
         return state
 
-    def add_than_get(self, state, priority):
-        return heapq.heappushpop(self.heap, (priority, state))
-
-
 
 def shortest_path(start,goal):
     
 
     h_dict = h_to_goal(map_40_intersections,goal)
 
-    #priority queue for storing our frontier elements
+    #priority set for storing our frontier elements
     frontier = PrioritySet()
     frontier.add(start,0)
 
     #For each node, which node it can most efficiently be reached from.
-    #If a node can be reached from many nodes, cameFrom will eventually contain
-    #the
+    #If a node can be reached from many nodes, came_from will eventually contain the
     #most efficient previous step.
     came_from = {}
     
@@ -173,6 +166,8 @@ def reconstruct_path(came_from, current):
 #outputs is a list of the shortest path from the start to finish (map indices)
 #worked examples:
 print("shortest path called")
-total_path = shortest_path(5, 34)
+total_path1 = shortest_path(5, 34)
+total_path2 = shortest_path(5, 5)
+total_path3 = shortest_path(8, 24)
 
-print (total_path)
+print (total_path1, total_path2, total_path3)
