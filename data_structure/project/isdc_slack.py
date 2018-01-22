@@ -1,72 +1,6 @@
 import heapq
 import math
 
-def heuristic_cost_estimate(M, s, g):
-    Point = nt('Point' , ['x','y'])
-    ps = Point(x = M.intersections[s][0], y = M.intersections[s][1])
-    pg = Point(x = M.intersections[g][0], y = M.intersections[g][1])
-    return math.sqrt((ps.x - pg.x) ** 2 + (ps.y - pg.y) ** 2)
-
-def distance_between(M, start, goal):
-    return (math.sqrt(sum([(x - y) ** 2 for x,y in  zip(M.intersections[start], M.intersections[goal])])))   
-
-def h_dist(M, s, g):
-    x1,y1 = M[s]
-    x2,y2 = M[g]
-    return math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
-
-def h_to_goal(M, goal):
-    h = {}
-    x2,y2 = M[goal]
-    for node, coord in M.items():
-        x1,y1 = coord
-        h_dist = math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
-        h[node] = h_dist
-    return h
-
-
-
-class PrioritySet(object):
-    def __init__(self):
-        self.heap = []
-        self.priority_set = set()
-
-    def add(self, state, priority):
-        if not state in self.priority_set:
-            heapq.heappush(self.heap, (priority, state))
-            self.priority_set.add(state)
-
-    def get(self):
-        priority, state = heapq.heappop(self.heap)
-        self.priority_set.remove(state)
-        return state
-
-
-
-map_10_intersections = {
-0: [0.7798606835438107, 0.6922727646627362],
-1: [0.7647837074641568, 0.3252670836724646],
-2: [0.7155217893995438, 0.20026498027300055],
-3: [0.7076566826610747, 0.3278339270610988],
-4: [0.8325506249953353, 0.02310946309985762],
-5: [0.49016747075266875, 0.5464878695400415],
-6: [0.8820353070895344, 0.6791919587749445],
-7: [0.46247219371675075, 0.6258061621642713],
-8: [0.11622158839385677, 0.11236327488812581],
-9: [0.1285377678230034, 0.3285840695698353]
-}
-
-map_10_roads = [[7, 6, 5],
-    [4, 3, 2],
-    [4, 3, 1],
-    [5, 4, 1, 2],
-    [1, 2, 3],
-    [7, 0, 3],
-    [0],
-    [0, 5],
-    [9],
-    [8]]
-
 map_40_intersections = {0: [0.7801603911549438, 0.49474860768712914],
  1: [0.5249831588690298, 0.14953665513987202],
  2: [0.8085335344099086, 0.7696330846542071],
@@ -149,66 +83,88 @@ map_40_roads = [[36, 34, 31, 28, 17],
  [23, 29, 32],
  [2, 4, 7, 22, 28, 36]]
 
+
+
+def h_dist(map_40_intersections, s, g):
+    x1,y1 = map_40_intersections[s]
+    x2,y2 = map_40_intersections[g]
+    return math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
+
+def h_to_goal(M, goal):
+    h = {}
+    x2,y2 = M[goal]
+    for node, coord in M.items():
+        x1,y1 = coord
+        h_dist = math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
+        h[node] = h_dist
+    return h
+
+
+class PrioritySet(object):
+    def __init__(self):
+        self.heap = []
+        self.priority_set = set()
+
+    def add(self, state, priority):
+        if not state in self.priority_set:
+            heapq.heappush(self.heap, (priority, state))
+            self.priority_set.add(state)
+
+    def get(self):
+        priority, state = heapq.heappop(self.heap)
+        self.priority_set.remove(state)
+        return state
+
+
 def shortest_path(start,goal):
     
-    #elements that are expanded
-    #The set of nodes already evaluated
-    explored = set()
 
+    h_dict = h_to_goal(map_40_intersections,goal)
 
-    #priority queue for storing our frontier elements
-    #The set of currently discovered nodes that are not evaluated yet.
-    #Initially, only the start node is known.
+    #priority set for storing our frontier elements
     frontier = PrioritySet()
-    frontier.add(start, 0)
-    
+    frontier.add(start,0)
 
     #For each node, which node it can most efficiently be reached from.
-    #If a node can be reached from many nodes, cameFrom will eventually contain
-    #the
+    #If a node can be reached from many nodes, came_from will eventually contain the
     #most efficient previous step.
     came_from = {}
-
+    
     #For each node, the cost of getting from the start node to that node
-    g_score = {}
-
+    g_score = {} 
     #The cost of going from start to start is zero.
     g_score[start] = 0
 
-    #For each node, the total cost of getting from the start node to the goal
-    #by passing by that node.  That value is partly known, partly heuristic.
-    f_score = {}
+    while not len(frontier.priority_set) == 0:
+        current = frontier.get()        
+        if current == goal:
+            return reconstruct_path(came_from, current)        
+        for next in map_40_roads[current]:
+            new_cost = g_score[current] + h_dist(map_40_intersections,current, next)
+            if next not in g_score or new_cost < g_score[next]:
+                g_score[next] = new_cost
+                priority = new_cost + h_dict[next]
+                frontier.add(next, priority)
+                came_from[next] = current    
+    return "no such node"
 
-    #For the first node, that value is completely heuristic.
-    f_score[start] = h_dist(map_40_intersections,start,goal)
-
-
-    while len(frontier.priority_set) != 0:
-        current = frontier.get()
-        if current is goal:
-            return reconstruct_path(came_from, current)
-        explored.add(current)
-        for neghbour in map_40_roads[current]:
-            if neghbour in explored:
-                continue
-            #The distance from start to a neighbor
-            #the "dist_between" function may vary as per the solution
-            #requirements.
-            tentative_gScore = g_score[current] + h_dist(map_40_intersections, current,neghbour)
-            came_from[neghbour] = current
-            g_score[neghbour] = tentative_gScore
-            f_score[neghbour] = g_score[neghbour] + h_dist(map_40_intersections,neghbour,goal)
-            frontier.add(neghbour,f_score[neghbour])
-    return ''
-
-def reconstruct_path(cameFrom, current):
+          
+def reconstruct_path(came_from, current):        
     total_path = [current]
-    while current in cameFrom.keys():
-        current = cameFrom[current]
+    while current in came_from.keys():
+        current = came_from[current]
         total_path.append(current)
-    total_path.reverse()
+    total_path.reverse()    
     return total_path
+    
 
+
+
+    
+#inputs are the map (a list of lists, a start position (map index), and ends
+#position)
+#outputs is a list of the shortest path from the start to finish (map indices)
+#worked examples:
 print("shortest path called")
 total_path1 = shortest_path(5, 34)
 total_path2 = shortest_path(5, 5)
