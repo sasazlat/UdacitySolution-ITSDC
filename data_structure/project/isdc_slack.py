@@ -90,26 +90,25 @@ def h_dist(map_40_intersections, s, g):
     x2,y2 = map_40_intersections[g]
     return math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
 
-def h_to_goal(M, goal):
-    h = {}
-    x2,y2 = M[goal]
-    for node, coord in M.items():
-        x1,y1 = coord
-        h_dist = math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
-        h[node] = h_dist
-    return h
-
-
 class PrioritySet(object):
+    """
+        PrioritySet class is implemented as set()
+        to prevent duplicates
+        @param heap as priority set
+        @param priority_set
+    """
     def __init__(self):
         self.heap = []
         self.priority_set = set()
 
+    # add state and priority  to the heap and 
+    # removes state from priority_state 
     def add(self, state, priority):
         if not state in self.priority_set:
             heapq.heappush(self.heap, (priority, state))
             self.priority_set.add(state)
 
+    # removes state from priority_set and returns it 
     def get(self):
         priority, state = heapq.heappop(self.heap)
         self.priority_set.remove(state)
@@ -120,9 +119,6 @@ class PrioritySet(object):
 
 
 def shortest_path(start,goal):
-    
-
-    h_dict = h_to_goal(map_40_intersections,goal)
 
     #priority set for storing our frontier elements
     frontier = PrioritySet()
@@ -144,10 +140,10 @@ def shortest_path(start,goal):
         if current == goal:
             return reconstruct_path(came_from, current)        
         for next in map_40_roads[current]:
-            new_cost = g_score[current] + h_dist(map_40_intersections,current, next)
-            if next not in g_score or new_cost < g_score[next]:
-                g_score[next] = new_cost
-                priority = new_cost + h_dict[next]
+            temp_g_score = g_score[current] + h_dist(map_40_intersections,current, next)
+            if next not in g_score or temp_g_score < g_score[next]:
+                g_score[next] = temp_g_score
+                priority = g_score[next] + h_dist(map_40_intersections,next, goal)
                 frontier.add(next, priority)
                 came_from[next] = current    
     return "no such node"
@@ -170,8 +166,8 @@ def reconstruct_path(came_from, current):
 #outputs is a list of the shortest path from the start to finish (map indices)
 #worked examples:
 print("shortest path called")
-total_path1 = shortest_path(5, 34)
 total_path2 = shortest_path(5, 5)
+total_path1 = shortest_path(5, 34)
 total_path3 = shortest_path(8, 24)
 
 print(total_path1, total_path2, total_path3)
