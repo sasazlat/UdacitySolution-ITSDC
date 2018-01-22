@@ -115,6 +115,9 @@ class PrioritySet(object):
         self.priority_set.remove(state)
         return state
 
+    def empty(self):
+        return len(self.priority_set) == 0
+
 
 def shortest_path(start,goal):
     
@@ -126,7 +129,8 @@ def shortest_path(start,goal):
     frontier.add(start,0)
 
     #For each node, which node it can most efficiently be reached from.
-    #If a node can be reached from many nodes, came_from will eventually contain the
+    #If a node can be reached from many nodes, came_from will eventually
+    #contain the
     #most efficient previous step.
     came_from = {}
     
@@ -135,7 +139,7 @@ def shortest_path(start,goal):
     #The cost of going from start to start is zero.
     g_score[start] = 0
 
-    while not len(frontier.priority_set) == 0:
+    while not frontier.empty():
         current = frontier.get()        
         if current == goal:
             return reconstruct_path(came_from, current)        
@@ -170,4 +174,4 @@ total_path1 = shortest_path(5, 34)
 total_path2 = shortest_path(5, 5)
 total_path3 = shortest_path(8, 24)
 
-print (total_path1, total_path2, total_path3)
+print(total_path1, total_path2, total_path3)
