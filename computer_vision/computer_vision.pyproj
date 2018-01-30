@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>6dd7b258-4f87-4120-8e29-73631691ba08</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>visualizing_RGB _channels.py</StartupFile>
+    <StartupFile>images_as_numerical_data.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
