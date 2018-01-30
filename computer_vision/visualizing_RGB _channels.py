@@ -47,7 +47,3 @@ ax2.imshow(g, cmap='gray')
 ax3.set_title('B channel')
 ax3.imshow(b, cmap='gray')
 plt.show()
-
-## Which area has the lowest value for red? What about for blue?
-
-

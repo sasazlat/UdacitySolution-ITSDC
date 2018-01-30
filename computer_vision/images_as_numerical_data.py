@@ -1,11 +1,3 @@
-
-# coding: utf-8
-
-# # Images as Grids of Pixels
-
-# ### Import resources
-
-# In[1]:
 import numpy as np
 import matplotlib.image as mpimg  # for reading in images
 import matplotlib.pyplot as plt
