@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\car_green_screen.jpg" />
+    <Content Include="images\car_green_screen2.jpg" />
     <Content Include="images\sky %281%29.jpg" />
     <Content Include="images\sky.jpg" />
     <Content Include="images\stop_sign.jpg" />
