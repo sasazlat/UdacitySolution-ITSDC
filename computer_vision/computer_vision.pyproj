@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>6dd7b258-4f87-4120-8e29-73631691ba08</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Classification.py</StartupFile>
+    <StartupFile>project\Traffic_Light_Classifier.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -48,6 +48,7 @@
     <Compile Include="pre_processing_examples.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="project\Traffic_Light_Classifier.py" />
     <Compile Include="standardizing_the_data.py">
       <SubType>Code</SubType>
     </Compile>
@@ -75,12 +76,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\" />
+    <Folder Include="images\day_night_images\" />
+    <Folder Include="images\day_night_images\test\" />
     <Folder Include="images\day_night_images\training\" />
     <Folder Include="D:\Documents\VisualStudioProjects\UdacitySolution\computer_vision\images\day_night_images\training\day\" />
+    <Folder Include="images\day_night_images\training\day\" />
     <Folder Include="images\day_night_images\training\night\" />
     <Folder Include="images\finding_edges\" />
     <Folder Include="D:\Documents\VisualStudioProjects\UdacitySolution\computer_vision\images\day_night_images\" />
     <Folder Include="D:\Documents\VisualStudioProjects\UdacitySolution\computer_vision\images\day_night_images\test\" />
+    <Folder Include="project\" />
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|ContinuumAnalytics|Anaconda36-64" />

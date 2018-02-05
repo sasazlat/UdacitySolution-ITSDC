@@ -195,8 +195,10 @@ f, (ax1, ax2) = plt.subplots(1, 2, figsize=(20,10))
 
 ax2.set_title('Value sum over columns')
 ax1.plot(v_sum)
+#plt.show()
 
 ax2.set_title('Original image')
 ax2.imshow(night_image, cmap='gray')
+plt.show()
 
 
