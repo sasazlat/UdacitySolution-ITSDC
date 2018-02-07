@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>6dd7b258-4f87-4120-8e29-73631691ba08</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>project\Traffic_Light_Classifier.py</StartupFile>
+    <StartupFile>hsv_color_conversion.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,19 +22,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="average_brightness.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Classification.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="computer_vision.py" />
-    <Compile Include="Feature_Vectors.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="finding_edges and_custom_kernels.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Green_Screen_Car.py">
       <SubType>Code</SubType>
     </Compile>
@@ -48,23 +36,16 @@
     <Compile Include="pre_processing_examples.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="project\Traffic_Light_Classifier.py" />
-    <Compile Include="standardizing_the_data.py">
+    <Compile Include="visualizing_RGB _channels.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="visualizing_RGB _channels.py">
+    <Compile Include="visualizing_the_data.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\car_green_screen.jpg" />
     <Content Include="images\car_green_screen2.jpg" />
-    <Content Include="images\day_night_images\training\day\20151102_074952.jpg" />
-    <Content Include="images\day_night_images\training\night\20151102_175445.jpg" />
-    <Content Include="images\finding_edges\bridge_trees_example.jpg" />
-    <Content Include="images\finding_edges\curved_lane.jpg" />
-    <Content Include="images\finding_edges\sobel_ops.png" />
-    <Content Include="images\finding_edges\white_lines.jpg" />
     <Content Include="images\sky %281%29.jpg" />
     <Content Include="images\sky.jpg" />
     <Content Include="images\stop_sign.jpg" />
@@ -76,16 +57,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\" />
-    <Folder Include="images\day_night_images\" />
-    <Folder Include="images\day_night_images\test\" />
-    <Folder Include="images\day_night_images\training\" />
-    <Folder Include="D:\Documents\VisualStudioProjects\UdacitySolution\computer_vision\images\day_night_images\training\day\" />
-    <Folder Include="images\day_night_images\training\day\" />
-    <Folder Include="images\day_night_images\training\night\" />
-    <Folder Include="images\finding_edges\" />
-    <Folder Include="D:\Documents\VisualStudioProjects\UdacitySolution\computer_vision\images\day_night_images\" />
-    <Folder Include="D:\Documents\VisualStudioProjects\UdacitySolution\computer_vision\images\day_night_images\test\" />
-    <Folder Include="project\" />
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|ContinuumAnalytics|Anaconda36-64" />
