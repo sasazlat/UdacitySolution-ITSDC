@@ -87,7 +87,6 @@
 # resources that you'll need.
 
 # In[1]:
-
 import cv2 # computer vision library
 import helpers # helper functions
 import random
@@ -121,7 +120,7 @@ import matplotlib.image as mpimg # for loading in images
 
 
 # Image data directories
-IMAGE_DIR_TRAINING = "images/traffic_light/training/"
+IMAGE_DIR_TRAINING = "\\images\\traffic_light\\training\\"
 IMAGE_DIR_TEST = "images/traffic_light/test/"
 
 
@@ -150,11 +149,12 @@ IMAGE_DIR_TEST = "images/traffic_light/test/"
 # Load training data
 
 
-
-image_num = 800
+image_num = 0
 IMAGE_LIST = helpers.load_dataset(IMAGE_DIR_TRAINING)
+print("list lenght ", str(len(IMAGE_LIST)))
 plt.imshow(IMAGE_LIST[image_num][0])
-print (IMAGE_LIST[image_num][1])
+plt.show()
+print(IMAGE_LIST[image_num][1])
 
 
 # ## Visualize the Data
@@ -190,13 +190,17 @@ print (IMAGE_LIST[image_num][1])
 
 
 
-
 selected_image = IMAGE_LIST[13][0]
 plt.imshow(selected_image)
-for i in range(10):
-    print ("Shape: " + str(IMAGE_LIST[i][0].shape))
-    #plt.imshow(IMAGE_LIST[750][0])
+plt.show()
 
+
+
+#for i in range(len(IMAGE_LIST)):
+#    print ("Shape: " + str(IMAGE_LIST[i][0].shape))
+#    plt.imshow(IMAGE_LIST[i][0])
+#    plt.show()
+    
 
 # # 2.  Pre-process the Data
 #
@@ -250,16 +254,20 @@ for i in range(10):
 # In[ ]:
 
 
-# This function should take in an RGB image and return a new, standardized version
-
+# This function should take in an RGB image and return a new, standardized
+# version
 def standardize_input(image):
     
-    ## TODO: Resize image and pre-process so that all "standard" images are the same size  
+    ## TODO: Resize image and pre-process so that all "standard" images are the
+    ## same size
     standard_im = np.copy(image)
     standard_im = cv2.resize(standard_im, (32,32))
     return standard_im
-im = standardize_input(IMAGE_LIST[0][0])    
-plt.imshow(im)
+
+
+#im = standardize_input(IMAGE_LIST[0][0])
+#plt.imshow(im)
+#plt.show()
     
 
 
@@ -288,21 +296,21 @@ plt.imshow(im)
 ## TODO: One hot encode an image label
 ## Given a label - "red", "green", or "yellow" - return a one-hot encoded label
 
-# Examples: 
+# Examples:
 # one_hot_encode("red") should return: [1, 0, 0]
 # one_hot_encode("yellow") should return: [0, 1, 0]
 # one_hot_encode("green") should return: [0, 0, 1]
-
-def one_hot_encode(label):
-    
-    ## TODO: Create a one-hot encoded label that works for all classes of traffic lights
+def one_hot_encode(label):    
+    ## TODO: Create a one-hot encoded label that works for all classes of
+    ## traffic lights
     one_hot_encoded = [0,0,0]
     idx = ["red", "yellow", "green"].index(label)
     one_hot_encoded[idx] = 1      
     
     return one_hot_encoded
-labes_one_hot = one_hot_encode("red")
-print (labes_one_hot)
+
+#labes_one_hot = one_hot_encode("red")
+#print (labes_one_hot)
 
 
 # ### Testing as you Code
@@ -326,12 +334,12 @@ print (labes_one_hot)
 # In[ ]:
 
 
-# Importing the tests
-import test_functions
-tests = test_functions.Tests()
+## Importing the tests
+#import test_functions
+#tests = test_functions.Tests()
 
-# Test for one_hot_encode function
-tests.test_one_hot(one_hot_encode)
+## Test for one_hot_encode function
+#tests.test_one_hot(one_hot_encode)
 
 
 # ## Construct a `STANDARDIZED_LIST` of input images and output labels.
@@ -344,7 +352,6 @@ tests.test_one_hot(one_hot_encode)
 #
 
 # In[ ]:
-
 def standardize(image_list):
     
     # Empty image data array
@@ -361,13 +368,19 @@ def standardize(image_list):
         # One-hot encode the label
         one_hot_label = one_hot_encode(label)    
 
-        # Append the image, and it's one hot encoded label to the full, processed list of image data 
+        # Append the image, and it's one hot encoded label to the full,
+        # processed list of image data
         standard_list.append((standardized_im, one_hot_label))
         
     return standard_list
 
 # Standardize all training images
 STANDARDIZED_LIST = standardize(IMAGE_LIST)
+
+#for i in range(len(STANDARDIZED_LIST)):
+#    print ("Shape: " + str(STANDARDIZED_LIST[i][0].shape))
+#    plt.imshow(STANDARDIZED_LIST[i][0])
+#    plt.show()
 
 
 
@@ -381,9 +394,9 @@ STANDARDIZED_LIST = standardize(IMAGE_LIST)
 
 
 ## TODO: Display a standardized image and its label
-im = 1000
+im = 5
 plt.imshow(STANDARDIZED_LIST[im][0])
-print ("Label: " + str(STANDARDIZED_LIST[im][1]))
+print("Label: " + str(STANDARDIZED_LIST[im][1]))
 
 
 # # 3.  Feature Extraction
@@ -464,6 +477,7 @@ ax3.set_title('S channel')
 ax3.imshow(s, cmap='gray')
 ax4.set_title('V channel')
 ax4.imshow(v, cmap='gray')
+plt.show()
 
 
 # ---
@@ -482,43 +496,37 @@ ax4.imshow(v, cmap='gray')
 # In[ ]:
 
 
-## TODO: Create a brightness feature that takes in an RGB image and outputs a feature vector and/or value
+## TODO: Create a brightness feature that takes in an RGB image and outputs a
+## feature vector and/or value
 ## This feature should use HSV colorspace values
 def create_feature(rgb_image):
     
     ## TODO: Convert image to HSV color space
     hsv = cv2.cvtColor(rgb_image, cv2.COLOR_RGB2HSV)
-    plt.imshow(hsv)
-    ##masking
-    #lower = np.array([50,100,40])
-    #upper = np.array([70, 255, 255])
-    #mask = cv2.inRange(hsv, lower, upper)
-    #rgb_image_masked = np.copy(rgb_image)
-    #rgb_image_masked[mask!=0] = [0,0,0]
+    lower = np.array([0,0,20])
+    upper = np.array([180, 100, 255])
+    mask = cv2.inRange(hsv, lower, upper)
+    rgb_image_masked = np.copy(rgb_image)
+    rgb_image_masked[mask!=0] = [0,0,0]
     #plt.imshow(rgb_image_masked)
+    #plt.show()    
     ## TODO: Create and return a feature value and/or vector
     feature = []
-    # V channel
-    h = hsv[:,:,0]
-    s = hsv[:,:,1]
-    v = hsv[:,:,2]
-
-    # Plot the original image and the three channels
-    f, (ax1, ax2, ax3, ax4) = plt.subplots(1, 4, figsize=(20,10))
+    #plt.imshow(rgb_image)    
+    f, (ax1, ax2) = plt.subplots(1, 2, figsize=(20,10))
     ax1.set_title('Standardized image')
-    ax1.imshow(rgb_image)
-    ax2.set_title('H channel')
-    ax2.imshow(h, cmap='gray')
-    ax3.set_title('S channel')
-    ax3.imshow(s, cmap='gray')
-    ax4.set_title('V channel')
-    ax4.imshow(v, cmap='gray')
-   
-    
+    ax1.imshow(rgb_image, cmap='gray')
+    ax2.set_title('MAsked')
+    ax2.imshow(rgb_image_masked, cmap='gray')
+    plt.show()
     return feature
-im = 56
+
 #plt.imshow(STANDARDIZED_LIST[im][0])
-create_feature(STANDARDIZED_LIST[im][0])
+for i in range(len(STANDARDIZED_LIST)):
+    create_feature(STANDARDIZED_LIST[33+i][0])
+    print ("Shape: " + str(STANDARDIZED_LIST[33+i][0].shape))
+    #plt.imshow(STANDARDIZED_LIST[i][0])
+    #plt.show()
 
 
 # ## (Optional) Create more features to help accurately label the traffic light
