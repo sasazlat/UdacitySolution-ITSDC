@@ -2,7 +2,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>1ccb0ddb-7953-4b2e-bd16-a110f4a26d50</ProjectGuid>
+    <ProjectGuid>b838fb35-9718-482b-a2a0-652b468ffe0e</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <StartupFile>computer_vision.py</StartupFile>
     <SearchPath>
@@ -21,14 +21,18 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="average_brightness.py" />
+    <Compile Include="Classification.py" />
     <Compile Include="computer_vision.py" />
+    <Compile Include="Feature_Vectors.py" />
+    <Compile Include="finding_edges and_custom_kernels.py" />
     <Compile Include="Green_Screen_Car.py" />
     <Compile Include="helpers.py" />
     <Compile Include="hsv_color_conversion.py" />
     <Compile Include="images_as_numerical_data.py" />
     <Compile Include="pre_processing_examples.py" />
+    <Compile Include="standardizing_the_data.py" />
     <Compile Include="visualizing_RGB _channels.py" />
-    <Compile Include="visualizing_the_data.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
