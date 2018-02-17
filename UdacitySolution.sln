@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2026
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "UdacitySolution", "UdacitySolution\UdacitySolution.pyproj", "{566F8074-1581-487D-9E6A-371D8D88428B}"
 EndProject
@@ -31,9 +31,9 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "data_structure", "data_stru
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Vechicle_Motion_and_Controls", "Vechicle_Motion_and_Controls\Vechicle_Motion_and_Controls.pyproj", "{08C8989C-7499-4490-8BF4-24582AFCF06E}"
 EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "computer_vision", "computer_vision\computer_vision.pyproj", "{6DD7B258-4F87-4120-8E29-73631691BA08}"
-EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Math", "Math\Math.pyproj", "{322DE82F-B5F3-4B61-B9FC-59D7FD4B61CA}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "computer_vision", "computer_vision\computer_vision.pyproj", "{1CCB0DDB-7953-4B2E-BD16-A110F4A26D50}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -153,18 +153,18 @@ Global
 		{08C8989C-7499-4490-8BF4-24582AFCF06E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08C8989C-7499-4490-8BF4-24582AFCF06E}.Release|x64.ActiveCfg = Release|Any CPU
 		{08C8989C-7499-4490-8BF4-24582AFCF06E}.Release|x86.ActiveCfg = Release|Any CPU
-		{6DD7B258-4F87-4120-8E29-73631691BA08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6DD7B258-4F87-4120-8E29-73631691BA08}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{6DD7B258-4F87-4120-8E29-73631691BA08}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{6DD7B258-4F87-4120-8E29-73631691BA08}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6DD7B258-4F87-4120-8E29-73631691BA08}.Release|x64.ActiveCfg = Release|Any CPU
-		{6DD7B258-4F87-4120-8E29-73631691BA08}.Release|x86.ActiveCfg = Release|Any CPU
 		{322DE82F-B5F3-4B61-B9FC-59D7FD4B61CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{322DE82F-B5F3-4B61-B9FC-59D7FD4B61CA}.Debug|x64.ActiveCfg = Debug|Any CPU
 		{322DE82F-B5F3-4B61-B9FC-59D7FD4B61CA}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{322DE82F-B5F3-4B61-B9FC-59D7FD4B61CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{322DE82F-B5F3-4B61-B9FC-59D7FD4B61CA}.Release|x64.ActiveCfg = Release|Any CPU
 		{322DE82F-B5F3-4B61-B9FC-59D7FD4B61CA}.Release|x86.ActiveCfg = Release|Any CPU
+		{1CCB0DDB-7953-4B2E-BD16-A110F4A26D50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CCB0DDB-7953-4B2E-BD16-A110F4A26D50}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1CCB0DDB-7953-4B2E-BD16-A110F4A26D50}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1CCB0DDB-7953-4B2E-BD16-A110F4A26D50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CCB0DDB-7953-4B2E-BD16-A110F4A26D50}.Release|x64.ActiveCfg = Release|Any CPU
+		{1CCB0DDB-7953-4B2E-BD16-A110F4A26D50}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

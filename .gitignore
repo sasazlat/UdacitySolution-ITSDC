@@ -262,5 +262,3 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
-/computer_vision/images/day_night_images/test
-/computer_vision/images/day_night_images/training
