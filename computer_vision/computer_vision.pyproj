@@ -27,6 +27,9 @@
     <Compile Include="hsv_color_conversion.py" />
     <Compile Include="images_as_numerical_data.py" />
     <Compile Include="pre_processing_examples.py" />
+    <Compile Include="project\helpers.py" />
+    <Compile Include="project\test_functions.py" />
+    <Compile Include="project\Traffic_Light_Classifier.py" />
     <Compile Include="visualizing_RGB _channels.py" />
     <Compile Include="visualizing_the_data.py" />
   </ItemGroup>
@@ -42,6 +45,7 @@
     <Folder Include="images\traffic_light\training\green\" />
     <Folder Include="images\traffic_light\training\red\" />
     <Folder Include="images\traffic_light\training\yellow\" />
+    <Folder Include="project\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\car_green_screen.jpg" />
