@@ -33,8 +33,6 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Vechicle_Motion_and_Control
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Math", "Math\Math.pyproj", "{322DE82F-B5F3-4B61-B9FC-59D7FD4B61CA}"
 EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "computer_vision", "computer_vision\computer_vision.pyproj", "{1CCB0DDB-7953-4B2E-BD16-A110F4A26D50}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -159,12 +157,6 @@ Global
 		{322DE82F-B5F3-4B61-B9FC-59D7FD4B61CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{322DE82F-B5F3-4B61-B9FC-59D7FD4B61CA}.Release|x64.ActiveCfg = Release|Any CPU
 		{322DE82F-B5F3-4B61-B9FC-59D7FD4B61CA}.Release|x86.ActiveCfg = Release|Any CPU
-		{1CCB0DDB-7953-4B2E-BD16-A110F4A26D50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1CCB0DDB-7953-4B2E-BD16-A110F4A26D50}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{1CCB0DDB-7953-4B2E-BD16-A110F4A26D50}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{1CCB0DDB-7953-4B2E-BD16-A110F4A26D50}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1CCB0DDB-7953-4B2E-BD16-A110F4A26D50}.Release|x64.ActiveCfg = Release|Any CPU
-		{1CCB0DDB-7953-4B2E-BD16-A110F4A26D50}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
