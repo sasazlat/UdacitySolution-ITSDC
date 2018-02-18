@@ -148,7 +148,6 @@ IMAGE_DIR_TEST = "images/traffic_light/test/"
 # Using the load_dataset function in helpers.py
 # Load training data
 
-
 image_num = 0
 IMAGE_LIST = helpers.load_dataset(IMAGE_DIR_TRAINING)
 print("list lenght ", str(len(IMAGE_LIST)))
@@ -186,7 +185,6 @@ print(IMAGE_LIST[image_num][1])
 
 # The first image in IMAGE_LIST is displayed below (without information about
 # shape or label)
-
 
 
 
@@ -503,28 +501,33 @@ def create_feature(rgb_image):
     
     ## TODO: Convert image to HSV color space
     hsv = cv2.cvtColor(rgb_image, cv2.COLOR_RGB2HSV)
-    lower = np.array([0,0,20])
-    upper = np.array([180, 100, 255])
-    mask = cv2.inRange(hsv, lower, upper)
+    lower1 = np.array([0,100,100])
+    upper1 = np.array([15, 200, 200])
+    lower2 = np.array([170,50,50])
+    upper2 = np.array([180, 200, 200])
+    mask1 = cv2.inRange(hsv, lower1, upper1)
+    mask2 = cv2.inRange(hsv, lower2, upper2)
+    mask = mask1 + mask2
     rgb_image_masked = np.copy(rgb_image)
-    rgb_image_masked[mask!=0] = [0,0,0]
+    #rgb_image_masked[mask != 0] = [0,0,0]
+    res = cv2.bitwise_and(rgb_image_masked, rgb_image_masked, mask = mask)
     #plt.imshow(rgb_image_masked)
-    #plt.show()    
+    #plt.show()
     ## TODO: Create and return a feature value and/or vector
     feature = []
-    #plt.imshow(rgb_image)    
+    #plt.imshow(rgb_image)
     f, (ax1, ax2) = plt.subplots(1, 2, figsize=(20,10))
     ax1.set_title('Standardized image')
     ax1.imshow(rgb_image, cmap='gray')
     ax2.set_title('MAsked')
-    ax2.imshow(rgb_image_masked, cmap='gray')
+    ax2.imshow(res, cmap='gray')
     plt.show()
     return feature
 
 #plt.imshow(STANDARDIZED_LIST[im][0])
 for i in range(len(STANDARDIZED_LIST)):
-    create_feature(STANDARDIZED_LIST[33+i][0])
-    print ("Shape: " + str(STANDARDIZED_LIST[33+i][0].shape))
+    create_feature(STANDARDIZED_LIST[i][0])
+    print("Shape: " + str(STANDARDIZED_LIST[i][0].shape))
     #plt.imshow(STANDARDIZED_LIST[i][0])
     #plt.show()
 
