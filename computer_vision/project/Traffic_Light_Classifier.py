@@ -121,7 +121,7 @@ import matplotlib.image as mpimg # for loading in images
 
 # Image data directories
 IMAGE_DIR_TRAINING = "\\images\\traffic_light\\training\\"
-IMAGE_DIR_TEST = "images/traffic_light/test/"
+IMAGE_DIR_TEST = "\\images\\traffic_light\\test\\"
 
 
 # ## Load the datasets
@@ -147,7 +147,6 @@ IMAGE_DIR_TEST = "images/traffic_light/test/"
 
 # Using the load_dataset function in helpers.py
 # Load training data
-
 image_num = 0
 IMAGE_LIST = helpers.load_dataset(IMAGE_DIR_TRAINING)
 print("list lenght ", str(len(IMAGE_LIST)))
@@ -185,9 +184,6 @@ print(IMAGE_LIST[image_num][1])
 
 # The first image in IMAGE_LIST is displayed below (without information about
 # shape or label)
-
-
-
 selected_image = IMAGE_LIST[13][0]
 plt.imshow(selected_image)
 plt.show()
@@ -497,32 +493,82 @@ plt.show()
 ## TODO: Create a brightness feature that takes in an RGB image and outputs a
 ## feature vector and/or value
 ## This feature should use HSV colorspace values
+def crop_image(rgb_image):
+    image = rgb_image[6:-6, 14:-14]
+    image  = standardize_input(image)
+    return image
+
+#def convert_to_HSV(rgb_cropped):
+    
+def crop_image(rgb_image):
+    image = rgb_image[6:-6, 14:-14]
+    image  = standardize_input(image)
+    return image
+
+def convert_to_HSV(rgb_cropped):
+    return cv2.cvtColor(rgb_cropped, cv2.COLOR_RGB2HSV)
+    
 def create_feature(rgb_image):
     
     ## TODO: Convert image to HSV color space
-    hsv = cv2.cvtColor(rgb_image, cv2.COLOR_RGB2HSV)
-    lower1 = np.array([0,100,100])
-    upper1 = np.array([15, 200, 200])
-    lower2 = np.array([170,50,50])
-    upper2 = np.array([180, 200, 200])
-    mask1 = cv2.inRange(hsv, lower1, upper1)
-    mask2 = cv2.inRange(hsv, lower2, upper2)
-    mask = mask1 + mask2
+    rgb_image = crop_image(rgb_image)
+    hsv = convert_to_HSV(rgb_image)
+    # HSV channels
+    #h = hsv[:,:,0]
+    #s = hsv[:,:,1]
+    v = hsv[:,:,2]
+    
+    #red mask
+    lower_red_1 = np.array([0,40,40])
+    upper_red_1 = np.array([10, 255, 255])
+    lower_red_2 = np.array([169,25,40])
+    upper_red_2 = np.array([179, 255, 255])
+    mask_red_1 = cv2.inRange(hsv, lower_red_1, upper_red_1)
+    mask_red_2 = cv2.inRange(hsv, lower_red_2, upper_red_2)
+
+    #yellow mask
+    lower_yellow = np.array([10, 15, 40])
+    upper_yellow = np.array([50, 255, 255])
+    mask_yellow = cv2.inRange(hsv, lower_yellow, upper_yellow)
+
+
+    #green mask
+    lower_green = np.array([50, 25, 40])
+    upper_green = np.array([100, 255, 255])
+    mask_green = cv2.inRange(hsv, lower_green, upper_green)
+
+    mask = mask_red_1 + mask_red_2 + mask_yellow + mask_green
     rgb_image_masked = np.copy(rgb_image)
-    #rgb_image_masked[mask != 0] = [0,0,0]
-    res = cv2.bitwise_and(rgb_image_masked, rgb_image_masked, mask = mask)
-    #plt.imshow(rgb_image_masked)
-    #plt.show()
+    rgb_image_masked[mask == 0] = [0,0,0]
+
     ## TODO: Create and return a feature value and/or vector
+    
+    #convert masked image to gray scale
+    rgb_image_masked_gray = cv2.cvtColor(rgb_image_masked, cv2.COLOR_RGB2GRAY)
+
+    #sum pixels value of gray masked image
+    gray_sum = np.sum(rgb_image_masked_gray[2:-2,2:-2], axis = 1)    
+    
+    #v channel sum
+    v_sum = np.sum(v[2:-2,2:-2], axis = 1)
+
     feature = []
-    #plt.imshow(rgb_image)
-    f, (ax1, ax2) = plt.subplots(1, 2, figsize=(20,10))
-    ax1.set_title('Standardized image')
-    ax1.imshow(rgb_image, cmap='gray')
-    ax2.set_title('MAsked')
-    ax2.imshow(res, cmap='gray')
-    plt.show()
+    
+    
+    max_sum = gray_sum + v_sum
+    #max value of intensity of gray masked image and v-component of HSV image 
+    max_value= np.argmax(max_sum)
+
+
+    if max_value < 13:
+        feature = [1,0,0]
+    elif max_value < 22:
+        feature = [0,1,0]
+    else:
+        feature = [0,0,1]
+        
     return feature
+
 
 #plt.imshow(STANDARDIZED_LIST[im][0])
 for i in range(len(STANDARDIZED_LIST)):
@@ -573,7 +619,7 @@ def estimate_label(rgb_image):
     ## TODO: Extract feature(s) from the RGB image and use those features to
     ## classify the image and output a one-hot encoded label
     predicted_label = []
-    
+    predicted_label = create_feature(rgb_image)
     return predicted_label   
     
 
@@ -655,6 +701,10 @@ def get_misclassified_images(test_images):
 
 # Find all misclassified images in a given test set
 MISCLASSIFIED = get_misclassified_images(STANDARDIZED_TEST_LIST)
+
+for image in MISCLASSIFIED:
+    plt.imshow(image[0])
+    plt.show()
 
 # Accuracy calculations
 total = len(STANDARDIZED_TEST_LIST)
