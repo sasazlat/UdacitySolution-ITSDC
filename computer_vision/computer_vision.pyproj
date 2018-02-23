@@ -2,9 +2,9 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>6dd7b258-4f87-4120-8e29-73631691ba08</ProjectGuid>
+    <ProjectGuid>{1ccb0ddb-7953-4b2e-bd16-a110f4a26d50}</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>project\image_copy.py</StartupFile>
+    <StartupFile>project\Traffic_Light_Classifier.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -99,6 +99,10 @@
     <Content Include="images\traffic_light\test\green\0c776797-c240-4fea-a26a-05b36fbc5ca1.jpg" />
     <Content Include="images\traffic_light\test\green\0da38382-3b5b-4114-b54f-c706269e4a34.jpg" />
     <Content Include="images\traffic_light\test\green\0e41f866-a861-415a-b9de-0ed37472816d.jpg" />
+    <Content Include="images\traffic_light\test\green\1.png" />
+    <Content Include="images\traffic_light\test\green\2.png" />
+    <Content Include="images\traffic_light\test\green\3.png" />
+    <Content Include="images\traffic_light\test\green\4.png" />
     <Content Include="images\traffic_light\test\red\01d76b8c-dc66-47b6-83d4-b00826dfec18.jpg" />
     <Content Include="images\traffic_light\test\red\02ebf5b7-739f-4a80-a719-e0c465a5d390.jpg" />
     <Content Include="images\traffic_light\test\red\02ed0cac-f1e9-4ed2-a04a-60abe027740f.jpg" />
@@ -120,6 +124,9 @@
     <Content Include="images\traffic_light\test\red\0cc864cb-112a-4f28-aeaf-da49c99b6a64.jpg" />
     <Content Include="images\traffic_light\test\red\0d126c7a-0efa-4c79-88be-62ab9fe0551a.jpg" />
     <Content Include="images\traffic_light\test\red\0d888299-2e5d-40a1-a47a-4fe1dde32eca.jpg" />
+    <Content Include="images\traffic_light\test\red\1.png" />
+    <Content Include="images\traffic_light\test\red\2.png" />
+    <Content Include="images\traffic_light\test\red\3.png" />
     <Content Include="images\traffic_light\test\yellow\0cb705ab-5c6d-41f1-ad9b-c0a99812cf15.jpg" />
     <Content Include="images\traffic_light\test\yellow\2f2fcecc-d118-454b-96e0-4018f584bf0a.jpg" />
     <Content Include="images\traffic_light\test\yellow\3a05a35f-31cd-4ea6-81b7-bafb30f83824.jpg" />
